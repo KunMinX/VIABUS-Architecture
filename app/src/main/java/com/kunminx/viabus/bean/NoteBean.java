@@ -10,7 +10,7 @@ import android.arch.persistence.room.PrimaryKey;
  * 实体类
  */
 @Entity
-public class NoteBean {
+public class NoteBean  {
 
     @PrimaryKey(autoGenerate = true)
     private Long id;
