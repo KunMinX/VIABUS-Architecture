@@ -11,13 +11,139 @@
 - 从前跨 Activity、跨组件实时双向通信，只能靠第三方库，现通过原生接口即可完成。⚡
 
 # 如何使用 viabus
-1.在模块的 build.gradle 添加依赖
+1.在模块的 build.gradle 添加如下依赖
+```
+implementation "com.kunminx.viabus:viabus-android:0.2.9"
 ```
 
+2.定义数据请求接口，继承于 IRequest。例如：
 ```
-2.在 ui 中注册成为响应接收者，在响应回调中依据响应码实现 ui 逻辑的处理。
+public interface INoteRequest extends IRequest{
 
-3.在业务中注册成为请求处理者，异步处理各种请求，并将结果数据同步返回。
+    void queryList();
+
+    void insert(NoteBean bean);
+    
+    ...
+}
+```
+
+3.定义 bus，来支持请求接口的访问。例如：
+```
+public class NoteBus extends BaseBus {
+
+    public static INoteRequest note() {
+        return (INoteRequest) getRequest(INoteRequest.class);
+    }
+    
+    ...
+}
+```
+
+4.在 ui 中注册成为响应接收者，通过 bus 发送数据请求，在响应回调中依据响应码实现 ui 逻辑的处理。
+```
+public class NoteListFragment extends Fragment implements IResponse {
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        NoteBus.registerResponseObserver(this);
+        ...
+    }
+
+    ...
+
+    private void initViews() {
+        ...
+        
+        //发送数据请求
+        NoteBus.note().queryList();
+    }
+
+    @Override
+    public void onResult(Result testResult) {
+        //依据响应码实现 ui 逻辑的处理
+        int resultCode = testResult.getResultCode();
+        switch (resultCode) {
+            case NoteResultCode.QUERY_LIST:
+                List<NoteBean> beanList;
+                if (testResult.getResultObject() != null) {
+                    beanList = (List<NoteBean>) testResult.getResultObject();
+                    mAdapter.setList(beanList);
+                    mAdapter.notifyDataSetChanged();
+                }
+                break;
+            case NoteResultCode.FAILURE:
+                ...
+                break;
+            default:
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        NoteBus.unregisterResponseObserver(this);
+    }
+}
+```
+
+5.在模块管理类中，将业务注册成为请求处理者。
+```
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        NoteBusiness noteBusiness = new NoteBusiness();
+        noteBusiness.init(getApplicationContext());
+        NoteBus.registerRequestHandler(noteBusiness);
+        ...
+    }
+}
+```
+
+
+6.业务继承于 BaseBusiness，异步处理各种请求，并返回进度或结果数据于主线程中。
+```
+public class NoteBusiness extends BaseBusiness<NoteBus> implements INoteRequest {
+
+	private DataBaseAdapter mDataBase;
+
+    public void init(Context context) {
+        mDataBase = new DataBaseAdapter();
+        mDataBase.init(context);
+    }
+
+    @Override
+    public void queryList() {
+        handleRequest(new IAsync() {
+            @Override
+            public Result onExecute(ObservableEmitter<Result> e) throws IOException {
+                List<NoteBean> list = mDataBase.getList(null, null);
+                for (NoteBean bean : list) {
+                    //进度的发送，背后是在主线程完成回调
+                    sendMessage(e, new Result(NoteResultCode.PROGRESS, bean.getId()));
+                }
+                //结果数据的返回，背后是在主线程完成回调
+                return new Result(NoteResultCode.QUERY_LIST, list);
+            }
+        });
+    }
+
+    @Override
+    public void insert(NoteBean bean) {
+        handleRequest(new IAsync() {
+            @Override
+            public Result onExecute(ObservableEmitter<Result> e) throws IOException {
+                ...
+            }
+        });
+    }
+
+	...
+}
+```
+
 
 # 见证者成就榜：
 
