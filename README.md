@@ -7,8 +7,8 @@
 - 从前改需求，需倒腾 2小时，现加上单元测试，也仅需 30分钟。🔥
 - 从前项目重构，需 3个人连续加班 1个月，现只需 1个人每天抽 2小时 渐进式重构。💧
 - 从前临时改需求，ui、presenter编写者 都得加班，现在互不拖累，独立自治，专注深耕各自领域。🌲
-- 从前跨 Activity、跨组件实时双向通信，只能靠第三方库，现通过原生接口即可完成。⚡
-- 从前使用 MVP、使用 Clean，导致类爆炸，现在你写的每个类都被充分利用。💪
+- 从前跨 Activity、跨组件的实时双向通信，只能靠第三方库，现通过原生接口即可完成。⚡
+- 从前使用 MVP 和 Clean，类爆炸且代码冗余，现在你写的每个类都被充分利用。💪
 - ...
 
 
@@ -27,7 +27,7 @@ public interface INoteRequest extends IRequest{
 }
 ```
 
-**2. 定义 bus**，来支持请求接口的访问。如：
+**2. 定义 bus**，用于支持请求接口的访问。如：
 ```
 public class NoteBus extends BaseBus {
     public static INoteRequest note() {
