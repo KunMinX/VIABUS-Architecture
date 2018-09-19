@@ -9,12 +9,12 @@
 - 从前跨 Activity、跨组件实时双向通信，只能靠第三方库，现通过原生接口即可完成。⚡
 
 # 如何使用 ViaBus
-- 在模块的 build.gradle 添加如下依赖
+0.在模块的 build.gradle 添加如下依赖
 ```
 implementation "com.kunminx.viabus:viabus-android:0.2.9"
 ```
 
-- 定义用于发送请求的接口。接口继承于 IRequest，如：
+1.**定义用于发送请求的接口**。接口继承于 IRequest，如：
 ```
 public interface INoteRequest extends IRequest{
     void queryList();
@@ -23,7 +23,7 @@ public interface INoteRequest extends IRequest{
 }
 ```
 
-- 定义 bus，来支持请求接口的访问。例如：
+2.**定义 bus**。来支持请求接口的访问。如：
 ```
 public class NoteBus extends BaseBus {
     public static INoteRequest note() {
@@ -33,7 +33,7 @@ public class NoteBus extends BaseBus {
 }
 ```
 
-- 在 ui 中注册成为响应接收者。通过 bus 发送数据请求，在响应回调中，依据响应码实现 ui 逻辑的处理。
+3.**在 ui 中注册成为响应接收者**。通过 bus 发送数据请求，在响应回调中，依据响应码实现 ui 逻辑的处理。
 ```
 public class NoteListFragment extends Fragment implements IResponse {
     @Override
@@ -67,7 +67,7 @@ public class NoteListFragment extends Fragment implements IResponse {
 }
 ```
 
-- 在模块管理类中，将业务注册成为请求处理者。
+4.在模块管理类中，**将业务注册成为请求处理者**。
 ```
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 
-- 业务继承于 BaseBusiness，异步处理各种请求，并返回进度或结果数据。
+5.业务继承于 BaseBusiness，**异步处理各种请求，并返回进度或结果数据**。
 ```
 public class NoteBusiness extends BaseBusiness<NoteBus> implements INoteRequest {
     @Override
@@ -89,10 +89,10 @@ public class NoteBusiness extends BaseBusiness<NoteBus> implements INoteRequest 
         handleRequest((e) -> {
             List<NoteBean> list = mDataBase.getList(null, null);
             for (NoteBean bean : list) {
-                //进度的发送，背后是在主线程完成回调
+                //进度的发送，背后是通过 bus，在主线程完成回调
                 sendMessage(e, new Result(NoteResultCode.PROGRESS, bean.getId()));
             }
-            //结果数据的返回，背后是在主线程完成回调
+            //结果数据的返回，背后是通过 bus，在主线程完成回调
             return new Result(NoteResultCode.QUERY_LIST, list);
         });
     }
