@@ -8,7 +8,7 @@
 - 从前项目重构，需 3个人连续加班 1个月，现只需 1个人每天抽 2小时 渐进式重构。💧
 - 从前临时改需求，ui、presenter编写者 都得加班，现在互不拖累，独立自治，专注深耕各自领域。🌲
 - 从前跨 Activity、跨组件实时双向通信，只能靠第三方库，现通过原生接口即可完成。⚡
-- 从前使用 MVP、使用 Clean，导致类爆炸，现在你写的每个类都被充分利用。📌
+- 从前使用 MVP、使用 Clean，导致类爆炸，现在你写的每个类都被充分利用。💪
 - ...
 
 
@@ -44,7 +44,7 @@ public class NoteListFragment extends Fragment implements IResponse {
     public View onCreateView(LayoutInflater inf, ViewGroup cont, Bundle bundle) {
         //注册成为响应接收者
 	NoteBus.registerResponseObserver(this);
-        ... //发送数据请求
+        //发送数据请求
 	NoteBus.note().queryList();
     }
 
@@ -59,7 +59,7 @@ public class NoteListFragment extends Fragment implements IResponse {
 		
     @Override
     public void onDestroy() {
-        ... //解除注册
+        //解除注册
         NoteBus.unregisterResponseObserver(this);
     }
 }
