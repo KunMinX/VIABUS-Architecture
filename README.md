@@ -35,11 +35,11 @@ public class NoteBus extends BaseBus {
 }
 ```
 
-4.在 ui 中注册成为响应接收者，通过 bus 发送数据请求，在响应回调中依据响应码实现 ui 逻辑的处理。
+4.在 ui 中注册成为响应接收者。通过 bus 发送数据请求，在响应回调中，依据响应码实现 ui 逻辑的处理。
 ```
 public class NoteListFragment extends Fragment implements IResponse {
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inf, ViewGroup cont, Bundle bundle) {
         //注册成为响应接收者
 	NoteBus.registerResponseObserver(this);
         ...
@@ -53,20 +53,16 @@ public class NoteListFragment extends Fragment implements IResponse {
         int resultCode = testResult.getResultCode();
         switch (resultCode) {
             case NoteResultCode.QUERY_LIST:
-                List<NoteBean> beanList;
-                if (testResult.getResultObject() != null) {
-                    beanList = (List<NoteBean>) testResult.getResultObject();
-                    mAdapter.refresh(beanList);
-                }
-                break;
-            case NoteResultCode.FAILURE:
+                ...
+                beanList = (List<NoteBean>) testResult.getResultObject();
+                mAdapter.refresh(beanList);
                 ...
         }
     }
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
+        ...
 	//解除注册
         NoteBus.unregisterResponseObserver(this);
     }
