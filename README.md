@@ -77,17 +77,16 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 
-
-**5. 业务继承于 BaseBusiness**，异步处理各种请求，发送进度消息，或返回结果数据。
+**5. 在业务中异步处理各种请求，发送进度消息，或返回结果数据。业务继承于 BaseBusiness**
 ```
 public class NoteBusiness extends BaseBusiness<NoteBus> implements INoteRequest {
     @Override
     public void queryList() {
         handleRequest((e) -> {
             List<NoteBean> list = mDataBase.getList(null, null);
-	    ...
+	    ... //发送进度消息
 	    sendMessage(e, new Result(NoteResultCode.PROGRESS, bean.getId()));
-	    ...
+	    ... //返回结果数据
             return new Result(NoteResultCode.QUERY_LIST, list); 
         });
     }
