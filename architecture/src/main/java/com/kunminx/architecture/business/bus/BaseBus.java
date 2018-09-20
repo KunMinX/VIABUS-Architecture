@@ -10,10 +10,6 @@ import java.util.List;
  * @author KunMinX
  * @date 2018/8/22
  * <p>
- * 虽然ui和业务可以多对多，但从request和response关系上讲，不是对称的多对多。
- * 一个ui一次仅可以筛选并请求一个业务，但业务响应的结果可以遍历分发给多个ui。
- * 换个角度说，ui接口的实现者实例可以有多个，业务接口的实现者实例只有一个。
- * 因此，ui用list装载，遍历皆回调（反注册的反正都已不在list中，不再监听响应）。业务用map装载，针对性的请求。
  */
 public class BaseBus {
 

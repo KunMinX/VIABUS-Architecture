@@ -49,7 +49,6 @@ public class PermissionUtils {
                 if (grantResults.length > 0) {
                     for (int i = 0; i < grantResults.length; i++) {
                         if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
-                            //TODO 还需检验，是否组名有国际通用的方法
                             sb.append(getGroupNameByPermissionName(context, permissions[i])).append(",");
                         }
                     }
@@ -81,7 +80,7 @@ public class PermissionUtils {
     }
 
     /**
-     * 通过危险权限名获取危险权限组名
+     * get group name by danger private permission
      *
      * @param permissionName
      * @return
@@ -89,7 +88,7 @@ public class PermissionUtils {
     public static String getGroupNameByPermissionName(Context context, String permissionName) {
         String groupName = "";
         switch (permissionName) {
-            //通过元器件调取实时隐私
+            //by public permission
             case Manifest.permission.BODY_SENSORS:
                 groupName = context.getString(R.string.permission_group_sensor);
                 break;
@@ -104,7 +103,7 @@ public class PermissionUtils {
                 groupName = context.getString(R.string.permission_group_audio);
                 break;
 
-            //通过持久化数据调取现成隐私
+            //by private permission
             case Manifest.permission.READ_PHONE_STATE:
             case Manifest.permission.CALL_PHONE:
             case Manifest.permission.READ_CALL_LOG:

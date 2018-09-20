@@ -21,7 +21,7 @@ import io.reactivex.schedulers.Schedulers;
 public class BaseBusiness<B extends BaseBus> {
 
     /**
-     * 发送消息。
+     * send message in main thread.
      *
      * @param e
      * @param result
@@ -31,7 +31,7 @@ public class BaseBusiness<B extends BaseBus> {
     }
 
     /**
-     * 发送进度progress。
+     * send progress info in main thread.
      *
      * @param e
      * @param result
@@ -41,7 +41,7 @@ public class BaseBusiness<B extends BaseBus> {
     }
 
     /**
-     * 处理请求
+     * handle request
      *
      * @param iAsync
      */
@@ -85,7 +85,7 @@ public class BaseBusiness<B extends BaseBus> {
 
     protected interface IAsync {
         /**
-         * 异步执行中
+         * excuting request in io thread
          *
          * @param e
          * @return
