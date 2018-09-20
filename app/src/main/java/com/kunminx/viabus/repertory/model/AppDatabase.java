@@ -51,6 +51,6 @@ public abstract class AppDatabase extends RoomDatabase {
                 .build();
     }
 
-    public abstract TestDao testDao();
+    public abstract NoteDao testDao();
 
 }

@@ -12,7 +12,7 @@ import java.util.List;
  * @date 2018/8/22
  */
 @Dao
-public interface TestDao {
+public interface NoteDao {
 
     @Query("SELECT * FROM NoteBean")
     List<NoteBean> getBeans();

@@ -3,6 +3,7 @@ package com.kunminx.viabus.ui;
 import android.Manifest;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 
 import com.kunminx.architecture.utils.PermissionUtils;
@@ -27,26 +28,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        NoteBusiness noteBusiness = new NoteBusiness();
+        noteBusiness.init(getApplicationContext());
+        NoteBus.registerRequestHandler(noteBusiness);
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragment_container, NoteListFragment.newInstance())
                 .addToBackStack(null).commit();
     }
 
     private void initModel() {
-        PermissionUtils.requestPermissionInActivity(new PermissionUtils.IPermissionCallback() {
-            @Override
-            public void onAllowedPermissions() {
-                NoteBusiness noteBusiness = new NoteBusiness();
-                noteBusiness.init(getApplicationContext());
-                NoteBus.registerRequestHandler(noteBusiness);
-                initView();
-            }
+        if (PermissionUtils.needPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            PermissionUtils.requestPermissionInActivity(new PermissionUtils.IPermissionCallback() {
+                @Override
+                public void onAllowedPermissions() {
+                    initView();
+                }
 
-            @Override
-            public void onDeniedPermissions(String msg) {
+                @Override
+                public void onDeniedPermissions(String msg) {
 
-            }
-        }, this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                }
+            }, this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        } else {
+            initView();
+        }
     }
 
     @Override
@@ -54,4 +59,9 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        PermissionUtils.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
 }

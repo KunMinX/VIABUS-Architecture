@@ -102,10 +102,10 @@ public class NoteListFragment extends Fragment implements IResponse {
 
                 break;
             case NoteResultCode.FAILURE:
-                Toast.makeText(getContext(), "数据请求失败", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.tip_request_failure, Toast.LENGTH_SHORT).show();
                 break;
             case NoteResultCode.CANCELED:
-                Toast.makeText(getContext(), "数据请求取消", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.tip_request_canceled, Toast.LENGTH_SHORT).show();
                 break;
             default:
         }

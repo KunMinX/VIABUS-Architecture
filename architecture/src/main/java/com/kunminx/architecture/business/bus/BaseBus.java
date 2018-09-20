@@ -1,5 +1,7 @@
 package com.kunminx.architecture.business.bus;
 
+import android.text.TextUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,8 +21,18 @@ public class BaseBus {
     private static List<IResponse> mIResponses = new ArrayList<>();
 
     public static void registerRequestHandler(IRequest request) {
-        String name = request.getClass().getSimpleName();
-        if (mIRequest.get(name) == null) {
+        Class[] interfaces = request.getClass().getInterfaces();
+        boolean isImplementInterface = false;
+        Class implementedInterface = null;
+        for (Class inf : interfaces) {
+            if (IRequest.class.isAssignableFrom(inf)) {
+                isImplementInterface = true;
+                implementedInterface = inf;
+                break;
+            }
+        }
+        String name = implementedInterface.getSimpleName();
+        if (isImplementInterface && !TextUtils.isEmpty(name) && mIRequest.get(name) == null) {
             mIRequest.put(name, request);
         }
     }
