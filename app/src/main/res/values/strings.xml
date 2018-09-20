@@ -5,4 +5,8 @@
     <string name="tip_insert_error">数据插入失败</string>
     <string name="tip_update_error">数据更新失败</string>
     <string name="tip_delete_error">数据删除失败</string>
+    <string name="tip_delete">删除</string>
+    <string name="tip_sure_to_delete">确定删除？</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
 </resources>

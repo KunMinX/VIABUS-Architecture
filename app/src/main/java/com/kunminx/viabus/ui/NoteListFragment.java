@@ -1,5 +1,7 @@
 package com.kunminx.viabus.ui;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -62,7 +64,7 @@ public class NoteListFragment extends Fragment implements IResponse {
             }
 
             @Override
-            protected void onBindItem(AdapterTestListBinding binding, final NoteBean item, final int position) {
+            protected void onBindItem(final AdapterTestListBinding binding, final NoteBean item, final int position) {
                 binding.tvTitle.setText(item.getTitle());
                 Glide.with(getContext()).load(item.getImgUrl()).into(binding.ivThumb);
                 binding.getRoot().setOnClickListener(new View.OnClickListener() {
@@ -74,6 +76,21 @@ public class NoteListFragment extends Fragment implements IResponse {
                         item.setTitle(UUID.randomUUID().toString());
                         notifyDataSetChanged();
                         NoteBus.note().update(item);
+                    }
+                });
+                binding.getRoot().setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        new AlertDialog.Builder(getActivity())
+                                .setTitle(R.string.tip_delete).setMessage(R.string.tip_sure_to_delete)
+                                .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        notifyItemRemoved(position);
+                                        NoteBus.note().delete(item);
+                                    }
+                                }).setNegativeButton(R.string.cancel, null).create().show();
+                        return true;
                     }
                 });
             }
@@ -113,7 +130,8 @@ public class NoteListFragment extends Fragment implements IResponse {
                 }
                 break;
             case NoteResultCode.UPDATED:
-
+                break;
+            case NoteResultCode.DELETED:
                 break;
             case NoteResultCode.FAILURE:
                 Toast.makeText(getContext(), testResult.getResultObject().toString(), Toast.LENGTH_SHORT).show();
