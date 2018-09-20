@@ -22,17 +22,18 @@ public class BaseBus {
 
     public static void registerRequestHandler(IRequest request) {
         Class[] interfaces = request.getClass().getInterfaces();
-        boolean isImplementInterface = false;
         Class implementedInterface = null;
         for (Class inf : interfaces) {
             if (IRequest.class.isAssignableFrom(inf)) {
-                isImplementInterface = true;
                 implementedInterface = inf;
                 break;
             }
         }
+        if (implementedInterface == null) {
+            throw new RuntimeException("Error: Please declare a request interface extends IRequest, and then make business class implement it.");
+        }
         String name = implementedInterface.getSimpleName();
-        if (isImplementInterface && !TextUtils.isEmpty(name) && mIRequest.get(name) == null) {
+        if (!TextUtils.isEmpty(name) && mIRequest.get(name) == null) {
             mIRequest.put(name, request);
         }
     }

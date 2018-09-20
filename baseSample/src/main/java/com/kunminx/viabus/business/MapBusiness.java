@@ -12,7 +12,7 @@ import java.io.IOException;
 import io.reactivex.ObservableEmitter;
 
 /**
- * @author xmj
+ * @author KunMinX
  * @date 2018/9/19
  */
 public class MapBusiness extends BaseBusiness<NoteBus> implements IMapRequest {

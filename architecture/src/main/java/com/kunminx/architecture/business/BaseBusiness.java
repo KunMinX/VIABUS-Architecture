@@ -21,7 +21,7 @@ import io.reactivex.schedulers.Schedulers;
 public class BaseBusiness<B extends BaseBus> {
 
     /**
-     * 在onExcute期间，需要回传进度progress等时使用。
+     * 发送消息。
      *
      * @param e
      * @param result
@@ -31,7 +31,7 @@ public class BaseBusiness<B extends BaseBus> {
     }
 
     /**
-     * 进度progress等时使用。
+     * 发送进度progress。
      *
      * @param e
      * @param result

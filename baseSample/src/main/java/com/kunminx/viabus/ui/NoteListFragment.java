@@ -1,7 +1,5 @@
 package com.kunminx.viabus.ui;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,16 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.kunminx.architecture.business.bus.IResponse;
 import com.kunminx.architecture.business.bus.Result;
 import com.kunminx.viabus.R;
 import com.kunminx.viabus.bean.NoteBean;
 import com.kunminx.viabus.business.bus.NoteBus;
 import com.kunminx.viabus.business.constant.NoteResultCode;
-import com.kunminx.viabus.databinding.AdapterTestListBinding;
 import com.kunminx.viabus.databinding.FragmentNoteListBinding;
-import com.kunminx.viabus.ui.adapter.BaseBindingAdapter;
+import com.kunminx.viabus.ui.adapter.NoteListAdapter;
 
 import java.util.List;
 import java.util.UUID;
@@ -32,7 +28,7 @@ import java.util.UUID;
 public class NoteListFragment extends Fragment implements IResponse {
 
     private FragmentNoteListBinding mBinding;
-    private BaseBindingAdapter<NoteBean, AdapterTestListBinding> mAdapter;
+    private NoteListAdapter mAdapter;
 
     public static NoteListFragment newInstance() {
         NoteListFragment fragment = new NoteListFragment();
@@ -57,42 +53,7 @@ public class NoteListFragment extends Fragment implements IResponse {
     }
 
     private void initViews() {
-        mAdapter = new BaseBindingAdapter<NoteBean, AdapterTestListBinding>(getContext()) {
-            @Override
-            protected int getLayoutResId(int viewType) {
-                return R.layout.adapter_test_list;
-            }
-
-            @Override
-            protected void onBindItem(final AdapterTestListBinding binding, final NoteBean item, final int position) {
-                binding.tvTitle.setText(item.getTitle());
-                Glide.with(getContext()).load(item.getImgUrl()).into(binding.ivThumb);
-                binding.getRoot().setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        item.setTitle(UUID.randomUUID().toString());
-                        notifyDataSetChanged();
-                        NoteBus.note().update(item);
-                    }
-                });
-                binding.getRoot().setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
-                        new AlertDialog.Builder(getActivity())
-                                .setTitle(R.string.tip_delete).setMessage(R.string.tip_sure_to_delete)
-                                .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        getList().remove(position);
-                                        notifyItemRemoved(position);
-                                        NoteBus.note().delete(item);
-                                    }
-                                }).setNegativeButton(R.string.cancel, null).create().show();
-                        return true;
-                    }
-                });
-            }
-        };
+        mAdapter = new NoteListAdapter(getContext());
         mBinding.rv.setAdapter(mAdapter);
         NoteBus.note().queryList();
     }
@@ -123,10 +84,6 @@ public class NoteListFragment extends Fragment implements IResponse {
                     mAdapter.getList().add(0, (NoteBean) testResult.getResultObject());
                     mAdapter.notifyItemInserted(0);
                 }
-                break;
-            case NoteResultCode.UPDATED:
-                break;
-            case NoteResultCode.DELETED:
                 break;
             case NoteResultCode.FAILURE:
                 Toast.makeText(getContext(), testResult.getResultObject().toString(), Toast.LENGTH_SHORT).show();

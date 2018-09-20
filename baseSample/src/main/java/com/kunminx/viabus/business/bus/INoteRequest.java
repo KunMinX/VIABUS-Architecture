@@ -4,7 +4,7 @@ import com.kunminx.architecture.business.bus.IRequest;
 import com.kunminx.viabus.bean.NoteBean;
 
 /**
- * @author xmj
+ * @author KunMinX
  * @date 2018/9/19
  */
 public interface INoteRequest extends IRequest{

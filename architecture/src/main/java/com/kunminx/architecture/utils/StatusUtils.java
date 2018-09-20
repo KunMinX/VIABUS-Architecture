@@ -6,7 +6,6 @@ package com.kunminx.architecture.utils;
  */
 public class StatusUtils {
 
-    //TODO 要测试一下
     public static boolean isEnabledStatus(int statuses, int... statusABC) {
         boolean enabled = false;
         for (int status : statusABC) {
@@ -15,7 +14,6 @@ public class StatusUtils {
         return enabled;
     }
 
-    //TODO 要测试一下
     public static int modifyStatus(int statuses, boolean add, int status) {
         if (add) {
             if ((statuses & status) == 0) {

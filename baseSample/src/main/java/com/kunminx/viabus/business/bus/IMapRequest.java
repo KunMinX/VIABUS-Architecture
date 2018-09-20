@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 import com.kunminx.architecture.business.bus.IRequest;
 
 /**
- * @author xmj
+ * @author KunMinX
  * @date 2018/9/19
  */
 public interface IMapRequest extends IRequest {

@@ -10,6 +10,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 
+import com.kunminx.architecture.R;
+
 /**
  * @author KunMinX
  * @date 2018/7/6
@@ -40,14 +42,15 @@ public class PermissionUtils {
         return ContextCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED;
     }
 
-    public static void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public static void onRequestPermissionsResult(Context context, int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
             case REQUEST_PERMISSIONS:
                 StringBuilder sb = new StringBuilder();
                 if (grantResults.length > 0) {
                     for (int i = 0; i < grantResults.length; i++) {
                         if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
-                            sb.append(getGroupNameByPermissionName(permissions[i])).append(",");
+                            //TODO 还需检验，是否组名有国际通用的方法
+                            sb.append(getGroupNameByPermissionName(context, permissions[i])).append(",");
                         }
                     }
                     String str = sb.toString();
@@ -78,27 +81,27 @@ public class PermissionUtils {
     }
 
     /**
-     * 通过危险权限名获取危险权限组名（中文）
+     * 通过危险权限名获取危险权限组名
      *
      * @param permissionName
      * @return
      */
-    public static String getGroupNameByPermissionName(String permissionName) {
+    public static String getGroupNameByPermissionName(Context context, String permissionName) {
         String groupName = "";
         switch (permissionName) {
             //通过元器件调取实时隐私
             case Manifest.permission.BODY_SENSORS:
-                groupName = "传感器";
+                groupName = context.getString(R.string.permission_group_sensor);
                 break;
             case Manifest.permission.ACCESS_FINE_LOCATION:
             case Manifest.permission.ACCESS_COARSE_LOCATION:
-                groupName = "定位";
+                groupName = context.getString(R.string.permission_group_location);
                 break;
             case Manifest.permission.CAMERA:
-                groupName = "摄像头";
+                groupName = context.getString(R.string.permission_group_camera);
                 break;
             case Manifest.permission.RECORD_AUDIO:
-                groupName = "录音";
+                groupName = context.getString(R.string.permission_group_audio);
                 break;
 
             //通过持久化数据调取现成隐私
@@ -109,27 +112,27 @@ public class PermissionUtils {
             case Manifest.permission.ADD_VOICEMAIL:
             case Manifest.permission.USE_SIP:
             case Manifest.permission.PROCESS_OUTGOING_CALLS:
-                groupName = "手机";
+                groupName = context.getString(R.string.permission_group_phone);
                 break;
             case Manifest.permission.SEND_SMS:
             case Manifest.permission.RECEIVE_SMS:
             case Manifest.permission.READ_SMS:
             case Manifest.permission.RECEIVE_WAP_PUSH:
             case Manifest.permission.RECEIVE_MMS:
-                groupName = "短信";
+                groupName = context.getString(R.string.permission_group_sms);
                 break;
             case Manifest.permission.READ_CONTACTS:
             case Manifest.permission.WRITE_CONTACTS:
             case Manifest.permission.GET_ACCOUNTS:
-                groupName = "联系人";
+                groupName = context.getString(R.string.permission_group_contact);
                 break;
             case Manifest.permission.READ_CALENDAR:
             case Manifest.permission.WRITE_CALENDAR:
-                groupName = "日历";
+                groupName = context.getString(R.string.permission_group_calendar);
                 break;
             case Manifest.permission.WRITE_EXTERNAL_STORAGE:
             case Manifest.permission.READ_EXTERNAL_STORAGE:
-                groupName = "外部存储";
+                groupName = context.getString(R.string.permission_group_extenal_storage);
                 break;
             default:
         }
