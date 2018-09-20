@@ -30,15 +30,15 @@ public class NoteListAdapter extends BaseBindingAdapter<NoteBean, AdapterTestLis
     protected void onBindItem(final AdapterTestListBinding binding, final NoteBean item, final int position) {
         binding.tvTitle.setText(item.getTitle());
         Glide.with(mContext).load(item.getImgUrl()).into(binding.ivThumb);
-        binding.getRoot().setOnClickListener(new View.OnClickListener() {
+        binding.tvTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 item.setTitle(UUID.randomUUID().toString());
-                notifyDataSetChanged();
+                notifyItemChanged(position);
                 NoteBus.note().update(item);
             }
         });
-        binding.getRoot().setOnLongClickListener(new View.OnLongClickListener() {
+        binding.tvTitle.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 getList().remove(position);

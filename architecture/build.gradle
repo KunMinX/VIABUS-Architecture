@@ -48,10 +48,11 @@ uploadArchives {
 }
 
 publish {
-    userOrg = 'ViaBus-Architecture' //bintray账户下某个组织id
+    userOrg = 'viabus-architecture' //bintray账户下某个组织id
     groupId = 'com.kunminx.viabus' //maven仓库下库的包名，一般为模块包名
     artifactId = 'viabus-architecture' //项目名称
     publishVersion = build_versions.versionName //版本号
     desc = 'viabus architecture for android' //项目介绍，可以不写
     website = 'https://github.com/ViaBus-Architecture' //项目主页，可以不写
+    licences = ['Apache-2.0']
 }

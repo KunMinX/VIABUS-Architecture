@@ -41,7 +41,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
 //    implementation project(':architecture')
-
     implementation "com.kunminx.viabus:viabus-architecture:0.3.2"
 
     implementation deps.room.runtime
