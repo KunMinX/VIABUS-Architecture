@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         NoteBusiness noteBusiness = new NoteBusiness();
-        noteBusiness.init(getApplicationContext());
+        noteBusiness.init(this.getApplicationContext());
         NoteBus.registerRequestHandler(noteBusiness);
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragment_container, NoteListFragment.newInstance())

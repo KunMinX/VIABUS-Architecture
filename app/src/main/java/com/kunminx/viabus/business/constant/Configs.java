@@ -9,5 +9,5 @@ import java.io.File;
  * @date 2018/8/22
  */
 public class Configs {
-    public final static String DB_PATH = Environment.getExternalStorageState() + File.separator + "test.db";
+    public final static String DB_PATH = Environment.getExternalStorageDirectory() + File.separator + "test.db";
 }

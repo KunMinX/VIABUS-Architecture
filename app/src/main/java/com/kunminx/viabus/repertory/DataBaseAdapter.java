@@ -5,6 +5,7 @@ import android.content.Context;
 import com.kunminx.viabus.bean.NoteBean;
 import com.kunminx.viabus.business.constant.Configs;
 import com.kunminx.viabus.repertory.model.AppDatabase;
+import com.kunminx.viabus.repertory.model.NoteDao;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @date 2018/8/22
  */
 public class DataBaseAdapter implements IDataBaseInterface<NoteBean> {
+
     @Override
     public void init(Context context) {
         AppDatabase.init(context, Configs.DB_PATH);
@@ -20,7 +22,7 @@ public class DataBaseAdapter implements IDataBaseInterface<NoteBean> {
 
     @Override
     public List<NoteBean> getList() {
-        return AppDatabase.getInstance().testDao().getBeans();
+        return AppDatabase.getInstance().noteDao().getBeans();
     }
 
     @Override
@@ -30,22 +32,22 @@ public class DataBaseAdapter implements IDataBaseInterface<NoteBean> {
 
     @Override
     public NoteBean getEntity(String uuid) {
-        return AppDatabase.getInstance().testDao().getBean(0);
+        return AppDatabase.getInstance().noteDao().getBean(0);
     }
 
     @Override
     public long insertEntity(NoteBean t) {
-        return 0;
+        return AppDatabase.getInstance().noteDao().insertBean(t);
     }
 
     @Override
     public int updateEntity(NoteBean t) {
-        return 0;
+        return AppDatabase.getInstance().noteDao().update(t);
     }
 
     @Override
     public int deleteEntity(NoteBean t) {
-        return 0;
+        return AppDatabase.getInstance().noteDao().delete(t);
     }
 
     @Override

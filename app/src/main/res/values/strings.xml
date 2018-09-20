@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">ViaMVP</string>
+    <string name="app_name">ViaBus</string>
     <string name="tip_request_failure">数据请求失败</string>
     <string name="tip_request_canceled">数据请求取消</string>
+    <string name="tip_insert_error">数据插入失败</string>
+    <string name="tip_update_error">数据更新失败</string>
+    <string name="tip_delete_error">数据删除失败</string>
 </resources>

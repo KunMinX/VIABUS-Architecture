@@ -21,6 +21,7 @@ import com.kunminx.viabus.databinding.FragmentNoteListBinding;
 import com.kunminx.viabus.ui.adapter.BaseBindingAdapter;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author KunMinX
@@ -61,15 +62,18 @@ public class NoteListFragment extends Fragment implements IResponse {
             }
 
             @Override
-            protected void onBindItem(AdapterTestListBinding binding, final NoteBean item, int position) {
+            protected void onBindItem(AdapterTestListBinding binding, final NoteBean item, final int position) {
                 binding.tvTitle.setText(item.getTitle());
                 Glide.with(getContext()).load(item.getImgUrl()).into(binding.ivThumb);
                 binding.getRoot().setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        getActivity().getSupportFragmentManager().beginTransaction()
+                        /*getActivity().getSupportFragmentManager().beginTransaction()
                                 .add(R.id.fragment_container, NoteDetailFragment.newInstance(item.getTitle()))
-                                .addToBackStack(null).commit();
+                                .addToBackStack(null).commit();*/
+                        item.setTitle(UUID.randomUUID().toString());
+                        notifyDataSetChanged();
+                        NoteBus.note().update(item);
                     }
                 });
             }
@@ -79,10 +83,16 @@ public class NoteListFragment extends Fragment implements IResponse {
     }
 
     public class ClickProxy {
-        public void newTest() {
-            getActivity().getSupportFragmentManager().beginTransaction()
+        public void newNote() {
+            /*getActivity().getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragment_container, NoteDetailFragment.newInstance(""))
-                    .addToBackStack(null).commit();
+                    .addToBackStack(null).commit();*/
+            NoteBean bean = new NoteBean(
+                    UUID.randomUUID().toString(),
+                    String.valueOf(System.currentTimeMillis()),
+                    "https://upload-images.jianshu.io/upload_images/57036-fb9653da874d2447.jpg"
+            );
+            NoteBus.note().insert(bean);
         }
     }
 
@@ -91,21 +101,25 @@ public class NoteListFragment extends Fragment implements IResponse {
         int resultCode = testResult.getResultCode();
         switch (resultCode) {
             case NoteResultCode.QUERY_LIST:
-                List<NoteBean> beanList;
                 if (testResult.getResultObject() != null) {
-                    beanList = (List<NoteBean>) testResult.getResultObject();
-                    mAdapter.setList(beanList);
+                    mAdapter.setList((List<NoteBean>) testResult.getResultObject());
                     mAdapter.notifyDataSetChanged();
                 }
                 break;
             case NoteResultCode.INSERTED:
+                if (testResult.getResultObject() != null) {
+                    mAdapter.getList().add(0, (NoteBean) testResult.getResultObject());
+                    mAdapter.notifyItemInserted(0);
+                }
+                break;
+            case NoteResultCode.UPDATED:
 
                 break;
             case NoteResultCode.FAILURE:
-                Toast.makeText(getContext(), R.string.tip_request_failure, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), testResult.getResultObject().toString(), Toast.LENGTH_SHORT).show();
                 break;
             case NoteResultCode.CANCELED:
-                Toast.makeText(getContext(), R.string.tip_request_canceled, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), testResult.getResultObject().toString(), Toast.LENGTH_SHORT).show();
                 break;
             default:
         }

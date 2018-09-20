@@ -42,12 +42,13 @@
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab"
-                android:onClick="@{()->clickProxy.newTest()}"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_margin="12dp"/>
+                android:layout_centerHorizontal="true"
+                android:layout_margin="12dp"
+                android:onClick="@{()->clickProxy.newNote()}"
+                android:src="@drawable/plus"/>
 
         </RelativeLayout>
 

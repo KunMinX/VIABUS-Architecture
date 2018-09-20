@@ -1,6 +1,7 @@
 package com.kunminx.viabus.bean;
 
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 /**
@@ -10,13 +11,20 @@ import android.arch.persistence.room.PrimaryKey;
  * 实体类
  */
 @Entity
-public class NoteBean  {
+public class NoteBean {
 
     @PrimaryKey(autoGenerate = true)
     private Long id;
     private String title;
     private String date;
     private String imgUrl;
+
+    @Ignore
+    public NoteBean(String title, String date, String imgUrl) {
+        this.title = title;
+        this.date = date;
+        this.imgUrl = imgUrl;
+    }
 
     public NoteBean(Long id, String title, String date, String imgUrl) {
         this.id = id;
