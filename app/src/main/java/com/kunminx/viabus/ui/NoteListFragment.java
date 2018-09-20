@@ -70,9 +70,6 @@ public class NoteListFragment extends Fragment implements IResponse {
                 binding.getRoot().setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        /*getActivity().getSupportFragmentManager().beginTransaction()
-                                .add(R.id.fragment_container, NoteDetailFragment.newInstance(item.getTitle()))
-                                .addToBackStack(null).commit();*/
                         item.setTitle(UUID.randomUUID().toString());
                         notifyDataSetChanged();
                         NoteBus.note().update(item);
@@ -86,6 +83,7 @@ public class NoteListFragment extends Fragment implements IResponse {
                                 .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
+                                        getList().remove(position);
                                         notifyItemRemoved(position);
                                         NoteBus.note().delete(item);
                                     }
@@ -101,9 +99,6 @@ public class NoteListFragment extends Fragment implements IResponse {
 
     public class ClickProxy {
         public void newNote() {
-            /*getActivity().getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_container, NoteDetailFragment.newInstance(""))
-                    .addToBackStack(null).commit();*/
             NoteBean bean = new NoteBean(
                     UUID.randomUUID().toString(),
                     String.valueOf(System.currentTimeMillis()),
