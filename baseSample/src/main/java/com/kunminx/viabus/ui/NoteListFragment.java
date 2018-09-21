@@ -35,6 +35,12 @@ public class NoteListFragment extends Fragment implements IResponse {
         return fragment;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        NoteBus.registerResponseObserver(this);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -42,7 +48,6 @@ public class NoteListFragment extends Fragment implements IResponse {
         mBinding = FragmentNoteListBinding.bind(view);
         mBinding.setClickProxy(new ClickProxy());
         setHasOptionsMenu(true);
-        NoteBus.registerResponseObserver(this);
         return view;
     }
 

@@ -19,9 +19,9 @@ allprojects {
         google()
         jcenter()
         //本地仓库
-        maven {
+        /*maven {
             url '..\\repository';
-        }
+        }*/
     }
 
     tasks.withType(Javadoc) {//防止编码问题
