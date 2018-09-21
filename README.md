@@ -5,6 +5,8 @@
 
 ## [中文文档](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md)
 
+![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
+
 # Why ViaBus?
 - Both of you and I are brave enough to grasp the essence of things, and constantly iterate the highly effective and efficient people.🌱
 - This framework clearly defines what is UI and what is business, which provides a realistic basis for code decoupling.💡
