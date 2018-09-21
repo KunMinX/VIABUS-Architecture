@@ -20,14 +20,13 @@
 ```
 implementation "com.kunminx.viabus:viabus-android:0.3.2"
 ```
-使用方法详见 [Wiki - how to use ViaBus](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus)
+使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus)
 
 
 # 见证者成就榜：
 
 |见证者|重构耗时|项目链接|
 |:--:|:--:|:--:|
-|KunMinX|3小时|![image]()|
-|MyateJx|3小时|![image]()|
-|KunMinX|3小时|![image]()|
-|KunMinX|3小时|![image]()|
+|KunMinX|3小时|[bilibili third-party client](https://github.com/KunMinX/bilibili-viabus-architecture)|
+|MyateJx|3小时|[gank.io](https://github.com/KunMinX/Gank.io-viabus-architecture)|
+|KunMinX|3小时|[WanAndroid](https://github.com/KunMinX/WanAndroid-viabus-architecture)|

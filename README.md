@@ -28,7 +28,6 @@ For details, see [Wiki - how to use ViaBus](https://github.com/KunMinX/android-v
 
 |Witness|Refactoring takes|Project link|
 |:--:|:--:|:--:|
-|KunMinX|3 hours|![image]()|
-|MyateJx|3 hours|![image]()|
-|KunMinX|3 hours|![image]()|
-|KunMinX|3 hours|![image]()|
+|KunMinX|3 hours|[bilibili third-party client](https://github.com/KunMinX/bilibili-viabus-architecture)|
+|MyateJx|3 hours|[gank.io](https://github.com/KunMinX/Gank.io-viabus-architecture)|
+|KunMinX|3 hours|[WanAndroid](https://github.com/KunMinX/WanAndroid-viabus-architecture)|
