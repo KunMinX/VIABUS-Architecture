@@ -13,15 +13,15 @@
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
 
 # Why ViaBus?
-- Both of you and I are brave enough to grasp the essence of things, and constantly iterate the highly effective and efficient people.🌱
-- This framework clearly defines what is UI and what is business, which provides a realistic basis for code decoupling.💡
-- In the past, it took 2 hours to change the demand, but now, plus the unit test, took only 30 minutes.🔥
-- In the past, three people had to work overtime for one month, but now only one person took two hours of incremental reconstruction every day.💧
-- In the past, writers of UI and presenter had to work overtime to meet the needs of temporary changes, but now they are not dragging on each other, independent and self-governing, and focused on their respective fields.🌲
-- Formerly, real-time two-way communication across Activity and components could only be accomplished by third-party libraries, but now it can be accomplished through native interfaces.⚡
-- Previously, there was a lot of duplication in the architecture, and the code was redundant. Now every class you write is taken advantage of.💪
+- In 1 minute, you can understand the structure and use of ViaBus. 💡
+- It can be used at the moment, completely compatible with the original project architecture, plug and play. 🔥
+- Allows incremental refactoring in one hour per day, in business or module units. 💧
+- The structure is self-contained, purely natural decoupling, and no longer has to worry about the troubles of lazy colleagues. 🌱
+- Real time two-way communication across Activity and cross components can be completed just through the native interface. ⚡
+- Less repetitive work, flat data interaction, and code reuse rate up to 100%. 💪
 - ...
 
+For details, see [Wiki - Comparison of various architectures](https://github.com/KunMinX/android-viabus-architecture/wiki/Comparison-of-various-architectures.) .
 
 # How to use ViaBus
 Add the following dependency to the module build.gradle
