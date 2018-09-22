@@ -11,23 +11,22 @@
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
 
 # 为什么选择 ViaBus
-- 你我都是勇于抓住事物本质、不断迭代精进的高效能人士。🌱
-- 该架构明确界定了什么是 ui、什么是业务，为代码解耦提供了现实依据。💡
-- 从前改需求，需倒腾 2小时，现加上单元测试，也仅需 30分钟。🔥
-- 从前项目重构，需 3个人连续加班 1个月，现只需 1个人每天抽 2小时 渐进式重构。💧
-- 从前临时改需求，ui、presenter编写者 都得加班，现在互不拖累，独立自治，专注深耕各自领域。🌲
-- 从前跨 Activity、跨组件的实时双向通信，只能靠第三方库，现通过原生接口即可完成。⚡
-- 从前架构中包含大量重复工作，且代码冗余，现在你写的每个类都被充分利用。💪
+- 1分钟即可掌握，ViaBus 的结构与使用方式。💡
+- 当下就可使用，对原项目架构完全兼容，即插即用。🌱
+- 允许以 业务或模块为单位，每天1小时，完成渐进式重构。🔥
+- 结构自带约束，先天解耦，再也不用担心同事挖坑。💧
+- 通过原生接口即可完成 跨 Activity、跨组件的 实时双向通信。⚡
+- 更少的重复工作，扁平的交互模式，代码复用率提升至100%。💪
 - ...
 
-更多依据详见 [Wiki - Android各类架构横向测评](https://github.com/KunMinX/android-viabus-architecture/wiki/Android-%E5%90%84%E7%B1%BB%E6%9E%B6%E6%9E%84%E6%A8%AA%E5%90%91%E6%AF%94%E8%BE%83)
+更多依据详见 [Wiki - Android 各类架构横向测评](https://github.com/KunMinX/android-viabus-architecture/wiki/Android-%E5%90%84%E7%B1%BB%E6%9E%B6%E6%9E%84%E6%A8%AA%E5%90%91%E6%B5%8B%E8%AF%84)
 
 # 如何使用 ViaBus
 在模块的 build.gradle 添加如下依赖
 ```
 implementation "com.kunminx.viabus:viabus-android:0.3.3"
 ```
-使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus)
+使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/1%E5%88%86%E9%92%9F%E6%8E%8C%E6%8F%A1-ViaBus-%E6%9E%B6%E6%9E%84%E7%9A%84%E4%BD%BF%E7%94%A8)
 
 
 # 见证者成就榜：
