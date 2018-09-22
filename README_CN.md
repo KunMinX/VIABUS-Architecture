@@ -20,7 +20,7 @@
 - 从前架构中包含大量重复工作，且代码冗余，现在你写的每个类都被充分利用。💪
 - ...
 
-更多依据详见 [Wiki - Android各类架构横向测评](https://github.com/KunMinX/android-viabus-architecture/wiki/Android-%E5%90%84%E7%B1%BB%E6%9E%B6%E6%9E%84%E6%A8%AA%E5%90%91%E6%AF%94%E8%BE%83)
+更多依据详见 [Wiki - Android 各类架构横向测评](https://github.com/KunMinX/android-viabus-architecture/wiki/Android-%E5%90%84%E7%B1%BB%E6%9E%B6%E6%9E%84%E6%A8%AA%E5%90%91%E6%B5%8B%E8%AF%84)
 
 # 如何使用 ViaBus
 在模块的 build.gradle 添加如下依赖
