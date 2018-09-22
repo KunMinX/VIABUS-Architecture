@@ -11,12 +11,12 @@
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
 
 # 为什么选择 ViaBus
-- 1分钟即可理解掌握，ViaBus的结构与使用方式。💡
-- 当下就可以使用，对原项目架构完全兼容，即插即用。🌱
-- 允许以业务或模块为单位，完成渐进式重构。🔥
-- 结构自带约束，纯天然解耦，再也不用担心同事挖坑。💧
-- 通过原生接口即可完成跨Activity、跨组件的实时双向通信。⚡
-- 更少的重复工作，扁平的数据交互，更高的代码复用率。💪
+- 1分钟即可掌握，ViaBus 的结构与使用方式。💡
+- 当下就可使用，对原项目架构完全兼容，即插即用。🌱
+- 允许以 业务或模块为单位，每天1小时，完成渐进式重构。🔥
+- 结构自带约束，先天解耦，再也不用担心同事挖坑。💧
+- 通过原生接口即可完成 跨 Activity、跨组件的 实时双向通信。⚡
+- 更少的重复工作，扁平的交互结构，代码复用率提升至100%。💪
 - ...
 
 更多依据详见 [Wiki - Android 各类架构横向测评](https://github.com/KunMinX/android-viabus-architecture/wiki/Android-%E5%90%84%E7%B1%BB%E6%9E%B6%E6%9E%84%E6%A8%AA%E5%90%91%E6%B5%8B%E8%AF%84)
@@ -26,7 +26,7 @@
 ```
 implementation "com.kunminx.viabus:viabus-android:0.3.3"
 ```
-使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus)
+使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/1%E5%88%86%E9%92%9F%E6%8E%8C%E6%8F%A1-ViaBus-%E6%9E%B6%E6%9E%84%E7%9A%84%E4%BD%BF%E7%94%A8)
 
 
 # 见证者成就榜：
