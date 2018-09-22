@@ -64,4 +64,12 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         PermissionUtils.onRequestPermissionsResult(getApplicationContext(), requestCode, permissions, grantResults);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            finish();
+        }
+    }
 }
