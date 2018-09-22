@@ -22,6 +22,7 @@
 - Previously, there was a lot of duplication in the architecture, and the code was redundant. Now every class you write is taken advantage of.💪
 - ...
 
+For details, see [Wiki - Comparison of various architectures](https://github.com/KunMinX/android-viabus-architecture/wiki/Comparison-of-various-architectures.) .
 
 # How to use ViaBus
 Add the following dependency to the module build.gradle
