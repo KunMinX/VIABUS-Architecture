@@ -98,8 +98,10 @@ def build_versions = [:]
 build_versions.min_sdk = 21
 build_versions.target_sdk = 27
 build_versions.build_tools = "27.0.3"
-build_versions.versionCode = 32
-build_versions.versionName = "0.3.2"
+
+//architecture的版本信息
+build_versions.versionCode = 33
+build_versions.versionName = "0.3.3"
 ext.build_versions = build_versions
 
 

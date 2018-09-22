@@ -1,6 +1,6 @@
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabuslogo.png)
 
-![image](https://img.shields.io/badge/jcenter-0.3.2-brightgreen.svg)
+![image](https://img.shields.io/badge/jcenter-0.3.3-brightgreen.svg)
 ![image](https://img.shields.io/badge/api-%2B15-blue.svg)
 ![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
@@ -24,7 +24,7 @@
 # 如何使用 ViaBus
 在模块的 build.gradle 添加如下依赖
 ```
-implementation "com.kunminx.viabus:viabus-android:0.3.2"
+implementation "com.kunminx.viabus:viabus-android:0.3.3"
 ```
 使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus)
 
