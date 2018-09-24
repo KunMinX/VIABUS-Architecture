@@ -76,7 +76,7 @@ public class NoteListFragment extends Fragment implements IResponse {
 
     @Override
     public void onResult(Result testResult) {
-        int resultCode = testResult.getResultCode();
+        String resultCode = (String) testResult.getResultCode();
         switch (resultCode) {
             case NoteResultCode.QUERY_LIST:
                 if (testResult.getResultObject() != null) {
