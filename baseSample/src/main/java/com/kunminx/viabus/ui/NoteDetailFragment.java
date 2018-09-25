@@ -79,7 +79,7 @@ public class NoteDetailFragment extends Fragment implements IResponse {
 
     @Override
     public void onResult(Result testResult) {
-        int resultCode = testResult.getResultCode();
+        String resultCode = (String) testResult.getResultCode();
         switch (resultCode) {
             case NoteResultCode.INSERTED:
                 break;

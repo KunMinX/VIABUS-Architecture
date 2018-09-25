@@ -37,21 +37,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initModel() {
-        if (PermissionUtils.needPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            PermissionUtils.requestPermissionInActivity(new PermissionUtils.IPermissionCallback() {
-                @Override
-                public void onAllowedPermissions() {
-                    initView();
-                }
+        PermissionUtils.requestPermissionInActivity(new PermissionUtils.IPermissionCallback() {
+            @Override
+            public void onAllowedPermissions() {
+                initView();
+            }
 
-                @Override
-                public void onDeniedPermissions(String msg) {
+            @Override
+            public void onDeniedPermissions(String msg) {
 
-                }
-            }, this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        } else {
-            initView();
-        }
+            }
+        }, this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }
 
     @Override
