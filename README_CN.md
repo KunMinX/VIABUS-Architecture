@@ -31,7 +31,7 @@ implementation "com.kunminx.viabus:viabus-android:0.3.3"
 
 # 见证者成就榜
 
-|见证者|重构耗时|项目链接|
+|见证者|预计重构耗时|项目链接|
 |:--:|:--:|:--:|
 |KunMinX|3小时|[bilibili 第三方客户端](https://github.com/KunMinX/bilibili-viabus-architecture)|
 |MyateJx|3小时|[gank.io 客户端](https://github.com/KunMinX/Gank.io-viabus-architecture)|
