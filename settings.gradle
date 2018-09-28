@@ -1,2 +1,2 @@
 include ':baseSample'
-//include ':architecture'
+include ':architecture'
