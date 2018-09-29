@@ -16,7 +16,7 @@
 - In 1 minute, you can understand the structure and use of ViaBus. 💡
 - It can be used at the moment, completely compatible with the original project architecture, plug and play. 🔥
 - Allows incremental refactoring in one hour per day, in business or module units. 💧
-- The structure is self-contained, purely natural decoupling, and no longer has to worry about the troubles of lazy colleagues. 🌱
+- Complete decoupling, no matter writing UI or writing business, is no longer interrupted and not dragged together. 🌱
 - Real time two-way communication across Activity and cross components can be completed just through the native interface. ⚡
 - No compile time annotation, and components written in Viabus can be used directly in any project.🌎
 - Less repetitive work, flat data interaction, and code reuse rate up to 100%. 💪
