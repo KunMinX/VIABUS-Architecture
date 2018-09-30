@@ -4,6 +4,8 @@
 ![image](https://img.shields.io/badge/api-%2B15-blue.svg)
 ![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
+![image](https://img.shields.io/badge/qq群-905136432-orange.svg)
+
 
 # 什么是 ViaBus
 ⭐ ViaBus 是一款响应式架构，借助总线转发数据的请求和响应，实现ui、业务的完全解耦。
@@ -33,6 +35,7 @@ implementation "com.kunminx.viabus:viabus-android:0.3.4"
 # Viabus 开发的作品
 
 如果你有基于 viabus 重构的作品，欢迎加群或电子邮件的方式投稿。
+
 投稿邮箱：kunminx@gmail.com
 
 |见证者|Logo|作品地址或项目链接|
