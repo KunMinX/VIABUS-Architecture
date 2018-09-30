@@ -30,13 +30,15 @@ implementation "com.kunminx.viabus:viabus-android:0.3.4"
 使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/1%E5%88%86%E9%92%9F%E6%8E%8C%E6%8F%A1-ViaBus-%E6%9E%B6%E6%9E%84%E7%9A%84%E4%BD%BF%E7%94%A8)
 
 
-# 见证者成就榜
+# Viabus 开发的作品
 
-|见证者|预计重构耗时|项目链接|
+如果你有基于 viabus 重构的作品，欢迎加群或电子邮件的方式投稿。
+投稿邮箱：kunminx@gmail.com
+
+|见证者|Logo|作品地址或项目链接|
 |:--:|:--:|:--:|
-|KunMinX|3小时|[bilibili 第三方客户端](https://github.com/KunMinX/bilibili-viabus-architecture)|
-|MyateJx|3小时|[gank.io 客户端](https://github.com/KunMinX/Gank.io-viabus-architecture)|
-|KunMinX|3小时|[WanAndroid 客户端](https://github.com/KunMinX/WanAndroid-viabus-architecture)|
+|MyateJx|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
+|MyateJx|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/KunMinX/Gank.io-viabus-architecture)|
 
 # License
 
