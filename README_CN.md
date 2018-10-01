@@ -10,6 +10,9 @@
 # 什么是 ViaBus
 ⭐ ViaBus 是一款响应式架构，借助总线转发数据的请求和响应，实现ui、业务的完全解耦。
 
+## [English Document](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md)
+
+
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
 
 # 为什么选择 ViaBus
@@ -22,7 +25,7 @@
 - 更少的重复工作，扁平的交互模式，代码复用率提升至100%。💪
 - ...
 
-更多依据详见 [Wiki - Android 各类架构横向测评](https://github.com/KunMinX/android-viabus-architecture/wiki/Android-%E5%90%84%E7%B1%BB%E6%9E%B6%E6%9E%84%E6%A8%AA%E5%90%91%E6%AF%94%E5%AF%B9)
+更多依据详见 [Wiki - Android：四大架构的优缺点，你真的了解吗？](https://github.com/KunMinX/android-viabus-architecture/wiki/Android-%E5%90%84%E7%B1%BB%E6%9E%B6%E6%9E%84%E6%A8%AA%E5%90%91%E6%AF%94%E5%AF%B9)
 
 # 如何使用 ViaBus
 在模块的 build.gradle 添加如下依赖
@@ -32,7 +35,7 @@ implementation "com.kunminx.viabus:viabus-android:0.3.4"
 使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/1%E5%88%86%E9%92%9F%E6%8E%8C%E6%8F%A1-ViaBus-%E6%9E%B6%E6%9E%84%E7%9A%84%E4%BD%BF%E7%94%A8)
 
 
-# Viabus 开发的作品
+# Viabus 作品集
 
 如果你有基于 viabus 重构的作品，欢迎加群或电子邮件的方式投稿。
 
