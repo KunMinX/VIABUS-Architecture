@@ -10,7 +10,7 @@
 # 什么是 ViaBus
 ⭐ ViaBus 是一款响应式架构，借助总线转发数据的请求和响应，实现ui、业务的完全解耦。
 
-## [English Document](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md)
+## [English Document](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_EN.md)
 
 
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
@@ -43,7 +43,7 @@ implementation "com.kunminx.viabus:viabus-android:0.3.4"
 
 |见证者|Logo|作品地址或项目链接|
 |:--:|:--:|:--:|
-|MyateJx|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
+|MyateJx|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本](https://www.coolapk.com/apk/com.myatejx.sakernote)|
 |MyateJx|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/KunMinX/Gank.io-viabus-architecture)|
 
 # License
