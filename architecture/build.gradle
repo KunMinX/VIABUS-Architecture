@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
-apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion build_versions.target_sdk
@@ -35,24 +33,4 @@ dependencies {
 
     implementation deps.appcompat_v7
     implementation deps.rxjava
-}
-
-uploadArchives {
-    repositories.mavenDeployer {
-        // 配置本地仓库路径，项目根目录下的repository目录中
-        repository(url: uri('../repository'))
-        pom.groupId = "com.kunminx.viabus"// 唯一标识（通常为模块包名，也可以任意）
-        pom.artifactId = "viabus-architecture" // 项目名称（通常为类库模块名称，也可以任意）
-        pom.version = build_versions.versionName // 版本号
-    }
-}
-
-publish {
-    userOrg = 'viabus-architecture' //bintray账户下某个组织id
-    groupId = 'com.kunminx.viabus' //maven仓库下库的包名，一般为模块包名
-    artifactId = 'viabus-architecture' //项目名称
-    publishVersion = build_versions.versionName //版本号
-    desc = 'viabus architecture for android' //项目介绍，可以不写
-    website = 'https://github.com/ViaBus-Architecture' //项目主页，可以不写
-    licences = ['Apache-2.0']
 }
