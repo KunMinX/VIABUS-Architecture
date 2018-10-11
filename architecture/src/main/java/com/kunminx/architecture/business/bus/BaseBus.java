@@ -63,8 +63,10 @@ public class BaseBus {
             return;
         }
         if (mIResponses != null && mIResponses.size() > 0) {
-            for (IResponse response : mIResponses) {
-                response.onResult(result);
+            //use for instead of foreach, to avoid java.util.ConcurrentModificationException by added register handler while traversal.
+            int length = mIResponses.size();
+            for (int i = 0; i < length; i++) {
+                mIResponses.get(i).onResult(result);
             }
         }
     }

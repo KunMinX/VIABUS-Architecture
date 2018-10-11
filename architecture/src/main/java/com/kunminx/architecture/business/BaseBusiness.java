@@ -67,11 +67,7 @@ public class BaseBusiness<B extends BaseBus> {
 
                     @Override
                     public void onNext(Result value) {
-                        try {
-                            B.response(value);
-                        } catch (Exception e1) {
-                            throw new RuntimeException(this.toString() + " " + e1.toString());
-                        }
+                        B.response(value);
                     }
 
                     @Override
