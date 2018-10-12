@@ -39,7 +39,7 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 投稿邮箱：kunminx@gmail.com
 
 |Logo|重构前项目地址|重构后项目地址|认领者 & 见证者|
-|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--:|
 |![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)||[MyateJx](https://github.com/MyateJx)|
 |![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[ganguo](https://github.com/yanyiqun001/ganguo)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|[MyateJx](https://github.com/MyateJx)|
 
