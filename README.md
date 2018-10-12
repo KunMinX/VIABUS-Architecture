@@ -34,14 +34,15 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 
 # Viabus 作品集
 
-截止 10月10日，viabus 主页平均每天有 150个 访问量。如果你有基于 viabus 重构的作品，欢迎投稿，这使你一个月能够曝光 4500次，让更多人见证你的 Coding。
+♥ 这里有个机会，投稿基于 viabus 重构的作品，viabus 月访问量 2.5k，你也可以曝光 3万 次以上，我觉得机会不错，推荐给你。
 
 投稿邮箱：kunminx@gmail.com
 
-|见证者|Logo|作品地址或项目链接|
+|Logo|重构前项目地址|重构后项目地址|认领者 & 见证者|
 |:--:|:--:|:--:|
-|[MyateJx](https://github.com/MyateJx)|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
-|[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|
+|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)||[MyateJx](https://github.com/MyateJx)|
+|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[ganguo](https://github.com/yanyiqun001/ganguo)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|[MyateJx](https://github.com/MyateJx)|
+
 
 # 鸣谢
 
