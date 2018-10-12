@@ -43,7 +43,7 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 |[MyateJx](https://github.com/MyateJx)|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
 |[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|
 
-可是如果，你想更多的见证来自他人的成品，而非亲自动手，那怎么办呢？这里也有个办法，本页面每增加 1个 star，投稿邮箱被曝光的几率将提升 1%，祝你好运。
+此外，如果你想更多的见证来自他人的成品，而非亲自动手，那也有个办法。本页面每点亮 1个 star，投稿邮箱被曝光的几率将提升 1%，祝你好运。
 
 # 鸣谢
 
