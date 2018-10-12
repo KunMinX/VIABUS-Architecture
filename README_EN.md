@@ -45,6 +45,10 @@ Contributor email: kunminx@gmail.com
 |[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io](https://github.com/MyateJx/GankIo-viabus-architecture)|
 
 
+# Thanks to
+
+RxJava
+
 # License
 
 ```
