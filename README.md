@@ -34,7 +34,7 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 
 # Viabus 作品集
 
-本页面可被访问 3万次以上，投稿基于 viabus 重构的项目，你也可以曝光多达 3万次，我觉得这个机会不错，推荐给你。
+本页面可被访问 10万次以上，投稿基于 viabus 重构的项目，你也可以曝光多达 10万次，我觉得这个机会不错，推荐给你。
 
 投稿邮箱：kunminx@gmail.com
 
@@ -42,6 +42,8 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 |:--:|:--:|:--:|
 |[MyateJx](https://github.com/MyateJx)|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
 |[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|
+
+如果你想更多的见证来自他人的成品，而不是亲自动手，怎么办呢？还有个办法，本页面每增加 1个 star，投稿邮箱被曝光的几率将提升 1%，祝你好运。
 
 # 鸣谢
 
