@@ -34,15 +34,14 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 
 # Viabus 作品集
 
-♥ 这里有个机会，投稿基于 viabus 重构的作品，viabus 月访问量 2.5k，你也可以曝光 3万 次以上，我觉得机会不错，推荐给你。
+投稿基于 viabus 重构的项目，本页面可被访问 3万次以上，你也可以曝光多达 3万次，我觉得这个机会不错，推荐给你。
 
 投稿邮箱：kunminx@gmail.com
 
-|Logo|重构前项目地址|重构后项目地址|认领者 & 见证者|
-|:--:|:--:|:--:|:--:|
-|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)||[MyateJx](https://github.com/MyateJx)|
-|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[ganguo](https://github.com/yanyiqun001/ganguo)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|[MyateJx](https://github.com/MyateJx)|
-
+|见证者|Logo|作品地址或项目链接|
+|:--:|:--:|:--:|
+|[MyateJx](https://github.com/MyateJx)|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
+|[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|
 
 # 鸣谢
 
