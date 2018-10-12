@@ -6,7 +6,7 @@
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
 ![image](https://img.shields.io/badge/qq群-905136432-orange.svg)
 
-### [中文](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md) | [English](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_EN.md)
+### [中文文档](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md) | [English](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_EN.md)
 
 # What's ViaBus?
 ⭐ ViaBus is a responsive architecture, driven by message bus programming, to achieve complete decoupling of UI and business.
