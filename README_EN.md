@@ -9,7 +9,7 @@
 # What's ViaBus?
 ⭐ ViaBus is a responsive architecture, driven by message bus programming, to achieve complete decoupling of UI and business.
 
-## [中文文档](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md)
+#### [中文](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md) | [English](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_EN.md)
 
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
 
