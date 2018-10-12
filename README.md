@@ -32,10 +32,13 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 ```
 使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/1%E5%88%86%E9%92%9F%E6%8E%8C%E6%8F%A1-ViaBus-%E6%9E%B6%E6%9E%84%E7%9A%84%E4%BD%BF%E7%94%A8)
 
+# 依赖的第三方库
+
+RxJava
 
 # Viabus 作品集
 
-如果你有基于 viabus 重构的作品，欢迎加群或电子邮件的方式投稿。
+截止 10月10日，viabus 主页平均每天有 150个 访问量。如果你有基于 viabus 重构的作品，欢迎投稿，这使你一个月能够曝光 4500次，让更多人见证你的 Coding。
 
 投稿邮箱：kunminx@gmail.com
 
@@ -43,10 +46,6 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 |:--:|:--:|:--:|
 |[MyateJx](https://github.com/MyateJx)|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
 |[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|
-
-# 依赖的第三方库
-
-RxJava
 
 # License
 
