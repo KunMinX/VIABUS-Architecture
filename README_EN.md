@@ -1,15 +1,15 @@
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabuslogo.png)
 
-![image](https://img.shields.io/badge/jcenter-0.3.6-brightgreen.svg)
+[中文](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md) | [English](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_EN.md)
+![image](https://img.shields.io/badge/jcenter-0.3.9-brightgreen.svg)
 ![image](https://img.shields.io/badge/api-%2B15-blue.svg)
 ![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
 ![image](https://img.shields.io/badge/qq群-905136432-orange.svg)
 
+
 # What's ViaBus?
 ⭐ ViaBus is a responsive architecture, driven by message bus programming, to achieve complete decoupling of UI and business.
-
-#### [中文](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md) | [English](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_EN.md)
 
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
 
@@ -28,7 +28,7 @@ For details, see [Wiki - Comparison of various architectures](https://github.com
 # How to use ViaBus
 Add the following dependency to the module build.gradle
 ```
-implementation "com.kunminx.viabus:viabus-android:0.3.6"
+implementation "com.kunminx.viabus:viabus-android:0.3.9"
 ```
 For details, see [Wiki - how to use ViaBus](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus) .
 

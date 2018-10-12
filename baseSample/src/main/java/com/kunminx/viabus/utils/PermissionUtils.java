@@ -1,4 +1,4 @@
-package com.kunminx.architecture.utils;
+package com.kunminx.viabus.utils;
 
 import android.Manifest;
 import android.app.Activity;

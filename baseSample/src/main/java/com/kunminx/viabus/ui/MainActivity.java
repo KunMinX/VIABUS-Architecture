@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 
-import com.kunminx.architecture.utils.PermissionUtils;
+import com.kunminx.viabus.utils.PermissionUtils;
 import com.kunminx.viabus.R;
 import com.kunminx.viabus.business.NoteBusiness;
 import com.kunminx.viabus.business.bus.NoteBus;
