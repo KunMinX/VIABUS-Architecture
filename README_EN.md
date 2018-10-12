@@ -41,8 +41,8 @@ Contributor email: kunminx@gmail.com
 
 |Witness|Logo|Work address or project link|
 |:--:|:--:|:--:|
-|MyateJx|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[SakerNote](https://www.coolapk.com/apk/com.myatejx.sakernote)|
-|MyateJx|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io](https://github.com/KunMinX/Gank.io-viabus-architecture)|
+|[MyateJx](https://github.com/MyateJx)|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[SakerNote](https://www.coolapk.com/apk/com.myatejx.sakernote)|
+|[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io](https://github.com/MyateJx/GankIo-viabus-architecture)|
 
 
 # License

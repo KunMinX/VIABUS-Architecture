@@ -43,8 +43,8 @@ implementation "com.kunminx.viabus:viabus-android:0.3.6"
 
 |见证者|Logo|作品地址或项目链接|
 |:--:|:--:|:--:|
-|MyateJx|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
-|MyateJx|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/KunMinX/Gank.io-viabus-architecture)|
+|[MyateJx](https://github.com/MyateJx)|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[SakerNote](https://www.coolapk.com/apk/com.myatejx.sakernote)|
+|[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io](https://github.com/MyateJx/GankIo-viabus-architecture)|
 
 # License
 
