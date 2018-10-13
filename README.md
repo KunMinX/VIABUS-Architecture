@@ -42,7 +42,7 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 
 投稿邮箱：kunminx@gmail.com
 
-当然，如果你想体验更多的重构成品，请 star 或者 fork，这能鼓励更多的人一块参与。
+当然，如果你想见证更多的重构成品，请 star 或者 fork，这能鼓励志同道合的人一块参与。
 
 |见证者|Logo|作品地址或项目链接|
 |:--:|:--:|:--:|
