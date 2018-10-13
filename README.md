@@ -44,7 +44,7 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 
 当然，如果你想见证更多的重构成品，请 star 或者 fork，这能鼓励志同道合的人一块参与。
 
-|见证者|Logo|作品地址或项目链接|
+|重构者|Logo|作品地址或项目链接|
 |:--:|:--:|:--:|
 |[MyateJx](https://github.com/MyateJx)|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
 |[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|
