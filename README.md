@@ -34,7 +34,9 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 
 # Viabus 作品集
 
-本页面可被访问 10万次以上，投稿基于 viabus 重构的作品，你也可以曝光多达 10万次，
+本页面可被访问 10万次，
+
+投稿基于 viabus 重构的作品，你也可以曝光多达 10万次，
 
 我觉得这个机会不错，推荐给你。
 
