@@ -32,15 +32,9 @@ implementation "com.kunminx.viabus:viabus-android:0.3.9"
 ```
 使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/1%E5%88%86%E9%92%9F%E6%8E%8C%E6%8F%A1-ViaBus-%E6%9E%B6%E6%9E%84%E7%9A%84%E4%BD%BF%E7%94%A8)
 
-# 哇，基于 Viabus 重构的作品！
+# 谁在用 Viabus
 
-本页面可被访问 10万次，你的大名和你的优秀代码也可以曝光多达 10万次，
-
-我觉得这个机会不错，推荐给你~
-
-投稿邮箱：kunminx@gmail.com
-
-|重构者|Logo|作品地址或项目链接|
+|见证者|Logo|作品地址或项目链接|
 |:--:|:--:|:--:|
 |[MyateJx](https://github.com/MyateJx)|![sakernote](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_sakernote.png)|[舒心录 - 酷安老牌记事本 app](https://www.coolapk.com/apk/com.myatejx.sakernote)|
 |[MyateJx](https://github.com/MyateJx)|![gankio](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/icon_gank.png)|[gank.io 客户端](https://github.com/MyateJx/GankIo-viabus-architecture)|
