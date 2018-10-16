@@ -8,10 +8,16 @@ public class Result {
 
     private Object resultCode;
     private Object resultObject;
+    private String tag;
 
     public Result(Object resultCode, Object resultObject) {
         this.resultCode = resultCode;
         this.resultObject = resultObject;
+    }
+
+    public Result(Object resultCode, Object resultObject, String tag) {
+        this(resultCode, resultObject);
+        this.tag = tag;
     }
 
     public Object getResultCode() {
@@ -30,4 +36,11 @@ public class Result {
         this.resultObject = resultObject;
     }
 
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
 }
