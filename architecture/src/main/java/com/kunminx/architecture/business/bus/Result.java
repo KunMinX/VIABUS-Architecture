@@ -9,6 +9,7 @@ public class Result {
     private Object resultCode;
     private Object resultObject;
     private String tag;
+    private boolean success;
 
     public Result(Object resultCode, Object resultObject) {
         this.resultCode = resultCode;
@@ -18,6 +19,17 @@ public class Result {
     public Result(Object resultCode, Object resultObject, String tag) {
         this(resultCode, resultObject);
         this.tag = tag;
+    }
+
+    public Result(Object resultCode, Object resultObject, boolean success) {
+        this(resultCode, resultObject);
+        this.success = success;
+    }
+
+    public Result(Object resultCode, Object resultObject, String tag, boolean success) {
+        this(resultCode, resultObject);
+        this.tag = tag;
+        this.success = success;
     }
 
     public Object getResultCode() {
@@ -42,5 +54,13 @@ public class Result {
 
     public void setTag(String tag) {
         this.tag = tag;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 }
