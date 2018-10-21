@@ -77,7 +77,7 @@ limitations under the License.
 
 这位帅哥一直在徘徊，本文到底该写给谁看？是只在乎写功能的码农吗？不了不了，码农若真的有心提升代码质量，就不会在项目中丧心病狂的堆积屎山。
 
-![](https://upload-images.jianshu.io/upload_images/57036-f79e77563ab71b77.gif)
+![](https://i.loli.net/2018/10/21/5bcc17403ca5c.gif)
 
 于是干脆写写重构心得、分享重构思路，让那些有意识在这方面有所提升的帅哥美女们，少走弯路吧！
 
@@ -748,7 +748,7 @@ public class XXXListFragment extends BaseFragment implements IResponse {
 
 原先装配一辆车需 700 小时，通过流水线分工后，平均一辆 12.5 小时，这使得生产效率提升了近 60 倍！
 
-![](https://upload-images.jianshu.io/upload_images/57036-a868513e7eb1ea62.gif?imageMogr2/auto-orient/strip)
+![](https://i.loli.net/2018/10/21/5bcc17cb6e6b4.gif)
 
 
 软件工程同理。
@@ -773,6 +773,6 @@ public class XXXListFragment extends BaseFragment implements IResponse {
 
 如果你觉得本文对你有帮助的话，欢迎 Star & Fork。相信会有一天，你也可以，高效率的编写和重构代码！
 
-![](https://upload-images.jianshu.io/upload_images/57036-77cc4b752a390c32.gif?imageMogr2/auto-orient/strip)
+![](https://i.loli.net/2018/10/21/5bcc17cb2d0b7.gif)
 
 
