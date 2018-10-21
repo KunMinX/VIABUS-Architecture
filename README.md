@@ -77,7 +77,7 @@ limitations under the License.
 
 这位帅哥一直在徘徊，本文到底该写给谁看？是只在乎写功能的码农吗？不了不了，码农若真的有心提升代码质量，就不会在项目中丧心病狂的堆积屎山。
 
-![](https://upload-images.jianshu.io/upload_images/57036-f79e77563ab71b77.gif?imageMogr2/auto-orient/strip)
+![](https://upload-images.jianshu.io/upload_images/57036-f79e77563ab71b77.gif)
 
 于是干脆写写重构心得、分享重构思路，让那些有意识在这方面有所提升的帅哥美女们，少走弯路吧！
 
