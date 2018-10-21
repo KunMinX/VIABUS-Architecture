@@ -77,11 +77,11 @@ limitations under the License.
 
 这位帅哥一直在徘徊，本文到底该写给谁看？是只在乎写功能的码农吗？不了不了，码农若真的有心提升代码质量，就不会在项目中丧心病狂的堆积屎山。
 
-![](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/how_to_refact_project/ride_a_horse.webp)
+![](https://upload-images.jianshu.io/upload_images/57036-f79e77563ab71b77.gif?imageMogr2/auto-orient/strip)
 
 于是干脆写写重构心得、分享重构思路，让那些有意识在这方面有所提升的帅哥美女们，少走弯路吧！
 
->在此首先感谢主管的信任与支持。本次重构中，帅哥在部门内部兜售并率先使用自主设计的 Viabus 架构，5 天内完成 60 个类的核心模块的重构。（不要慌，正如你所见到的，架构已在 GitHub 开源）
+>在此首先感谢主管的信任与支持。本次重构中，帅哥在部门内部兜售并率先使用自主设计的 Viabus 架构，5 天内完成 60 个类的核心模块的重构。（不要慌，正如你所见到的，本架构已在 GitHub 开源）
 
 以下正文。
 
@@ -482,8 +482,7 @@ if else switch if else switch，只在乎功能实现的码农就是这么写的
 
 一个地区 50 行，那要是 10 个地区呢？公司领导放话要支持全国 100 个乡镇地区！那 100 个地区呢？？？
 
-![](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/how_to_refact_project/add_100_area.webp)
-
+![](https://upload-images.jianshu.io/upload_images/57036-5567a4dbacb38ef2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 抽象，顺应的是“开闭原则”
 
@@ -577,8 +576,7 @@ public class XXXDetailFragment extends BaseFragment implements IResponse {
 
 听说过“代码耦合”和“解耦”的人很多，但真正理解这是怎么一回事的，**恐怕只有你 ~**
 
-![](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/how_to_refact_project/so_what.webp)
-
+![](https://upload-images.jianshu.io/upload_images/57036-5540f4aa1b2b83fd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 因为哪怕你不知，你也即将见证一位帅哥如何手把手带你解耦 ~
 
@@ -750,7 +748,7 @@ public class XXXListFragment extends BaseFragment implements IResponse {
 
 原先装配一辆车需 700 小时，通过流水线分工后，平均一辆 12.5 小时，这使得生产效率提升了近 60 倍！
 
-![](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/how_to_refact_project/assemble_line.webp)
+![](https://upload-images.jianshu.io/upload_images/57036-a868513e7eb1ea62.gif?imageMogr2/auto-orient/strip)
 
 
 软件工程同理。
@@ -775,6 +773,6 @@ public class XXXListFragment extends BaseFragment implements IResponse {
 
 如果你觉得本文对你有帮助的话，欢迎 Star & Fork。相信会有一天，你也可以，高效率的编写和重构代码！
 
-![](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/how_to_refact_project/good_luck.webp)
+![](https://upload-images.jianshu.io/upload_images/57036-77cc4b752a390c32.gif?imageMogr2/auto-orient/strip)
 
 
