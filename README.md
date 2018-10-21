@@ -574,7 +574,7 @@ public class XXXDetailFragment extends BaseFragment implements IResponse {
 
 ## 代码是如何剪不断理还乱的？
 
-听说过“代码耦合”和“解耦”的人很多，但真正理解这是怎么一回事的，**恐怕只有你 ~**
+听说过“代码耦合”和“解耦”的人很多，但真正理解这是怎么一回事的，**恐怕只有你** ~
 
 ![](https://upload-images.jianshu.io/upload_images/57036-5540f4aa1b2b83fd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -702,15 +702,15 @@ public class XXXListBusinessProxy extends BaseBusiness<XXXBus> implements IXXXLi
 
 public class XXXListFragment extends BaseFragment implements IResponse {
 
-	XXXBus.XXX().queryList(mDto);
-	
-	XXXBus.XXX().multiAddOrRemove(mDto);
-	
-	XXXBus.XXX().queryPattern(mDto);
+    XXXBus.XXX().queryList(mDto);
+    
+    XXXBus.XXX().multiAddOrRemove(mDto);
+    
+    XXXBus.XXX().queryPattern(mDto);
 
-	...
+    ...
 
-	@Override
+    @Override
     public void onResult(Result testResult) {
         String code = (String) testResult.getResultCode();
         switch (code) {
@@ -730,11 +730,11 @@ public class XXXListFragment extends BaseFragment implements IResponse {
                 }
                 dismissProgressDialog();
                 break;
-			case XXXDataResultCode.XXX_LIST_FRAGMENT_REFRESH_PATTERN:
-				...
-				break;
-			default:
-        }
+	    case XXXDataResultCode.XXX_LIST_FRAGMENT_REFRESH_PATTERN:
+		...
+		break;
+	    default:
+        }    
     }
 }
 
