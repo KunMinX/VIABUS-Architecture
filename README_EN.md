@@ -28,7 +28,7 @@ For details, see [Wiki - Comparison of various architectures](https://github.com
 # How to use ViaBus
 Add the following dependency to the module build.gradle
 ```
-implementation "com.kunminx.viabus:viabus-android:0.4.1"
+implementation "com.kunminx.viabus:viabus-architecture:0.4.1"
 ```
 For details, see [Wiki - how to use ViaBus](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus) .
 
