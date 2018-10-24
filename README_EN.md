@@ -1,6 +1,6 @@
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabuslogo.png)
 
-![image](https://img.shields.io/badge/jcenter-0.4.1-brightgreen.svg)
+![image](https://img.shields.io/badge/jcenter-0.4.2-brightgreen.svg)
 ![image](https://img.shields.io/badge/api-%2B15-blue.svg)
 ![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
@@ -28,7 +28,7 @@ For details, see [Wiki - Comparison of various architectures](https://github.com
 # How to use ViaBus
 Add the following dependency to the module build.gradle
 ```
-implementation "com.kunminx.viabus:viabus-architecture:0.4.1"
+implementation "com.kunminx.viabus:viabus-architecture:0.4.2"
 ```
 For details, see [Wiki - how to use ViaBus](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus) .
 

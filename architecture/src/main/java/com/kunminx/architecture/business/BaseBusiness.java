@@ -50,7 +50,7 @@ public class BaseBusiness<B extends BaseBus> {
             @Override
             public void subscribe(ObservableEmitter<Result> e) {
                 try {
-                    if (iAsync != null) {
+                    if (iAsync != null && iAsync.onExecute(e) != null) {
                         e.onNext(iAsync.onExecute(e));
                     }
                 } catch (Exception e1) {
