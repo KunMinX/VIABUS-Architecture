@@ -1,5 +1,7 @@
 package com.kunminx.architecture.business;
 
+import android.util.Log;
+
 import com.kunminx.architecture.business.bus.BaseBus;
 import com.kunminx.architecture.business.bus.Result;
 import com.kunminx.architecture.business.bus.ResultCode;
@@ -19,6 +21,8 @@ import io.reactivex.schedulers.Schedulers;
  * @date 2018/8/22
  */
 public class BaseBusiness<B extends BaseBus> {
+
+    private boolean pringLog = false;
 
     /**
      * send message in main thread.
@@ -50,11 +54,20 @@ public class BaseBusiness<B extends BaseBus> {
             @Override
             public void subscribe(ObservableEmitter<Result> e) {
                 try {
-                    if (iAsync != null && iAsync.onExecute(e) != null) {
-                        e.onNext(iAsync.onExecute(e));
+                    if (iAsync != null) {
+                        Result result = iAsync.onExecute(e);
+                        if (result != null) {
+                            e.onNext(result);
+                            if (pringLog) {
+                                Log.d(result.getTag(), result.getResultCode().toString());
+                            }
+                        }
                     }
                 } catch (Exception e1) {
                     e.onError(e1);
+                    if (pringLog) {
+                        Log.d("error", e1.toString());
+                    }
                 }
             }
         }).subscribeOn(Schedulers.io())
@@ -94,4 +107,11 @@ public class BaseBusiness<B extends BaseBus> {
         Result onExecute(ObservableEmitter<Result> e) throws IOException;
     }
 
+    public boolean isPringLog() {
+        return pringLog;
+    }
+
+    public void setPringLog(boolean pringLog) {
+        this.pringLog = pringLog;
+    }
 }
