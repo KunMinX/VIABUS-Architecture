@@ -48,11 +48,9 @@ RxJava
 
 邮箱：[kunminx@gmail.com](mailto:kunminx@gmail.com)
 
-主页：[KunMinX](https:kunminx.github.io)
-
 掘金：[Android：你还在等那个，手把手带你重构的人出现吗？](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
 
-简书：[https://KunMinX.jianshu.com/](https://www.jianshu.com/u/5d956b6dcf1f)
+简书：[kunminx@jianshu](https://www.jianshu.com/u/5d956b6dcf1f)
 
 
 # License
