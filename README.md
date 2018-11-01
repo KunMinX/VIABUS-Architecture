@@ -44,6 +44,15 @@ implementation "com.kunminx.viabus:viabus-architecture:0.4.3"
 
 RxJava
 
+# 更多访问
+
+邮箱：[kunminx@gmail.com](mailto:kunminx@gmail.com)
+
+简书：[kunminx@jianshu](https://www.jianshu.com/u/5d956b6dcf1f)
+
+掘金：[Android：你还在等那个，手把手带你重构的人出现吗？](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
+
+
 # License
 
 ```
