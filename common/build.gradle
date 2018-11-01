@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion build_versions.target_sdk
@@ -6,11 +6,13 @@ android {
     defaultConfig {
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
-        applicationId "com.kunminx.viabus"
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -18,39 +20,17 @@ android {
         }
     }
 
-    repositories {
-        flatDir {
-            dirs 'libs', '../common/libs'
-        }
-    }
-
-    dataBinding {
-        enabled = true
-    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation deps.appcompat_v7
-    implementation deps.constraint_layout
-    implementation deps.design
-    implementation deps.cardview
 
+    implementation deps.appcompat_v7
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation project(':common')
-    compileOnly "com.kunminx.viabus:viabus-architecture:0.4.3"
-
-//    implementation "com.kunminx.viabus:viabus-architecture:0.4.2"
-
-    implementation deps.room.runtime
-    annotationProcessor deps.room.compiler
-
-    compileOnly deps.rxjava
-    compileOnly deps.okhttp
-    implementation deps.glide
+//    implementation project(':architecture')
+    implementation "com.kunminx.viabus:viabus-architecture:0.4.3"
 
 }
-
