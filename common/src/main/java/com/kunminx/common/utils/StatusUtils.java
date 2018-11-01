@@ -1,4 +1,4 @@
-package com.kunminx.viabus.utils;
+package com.kunminx.common.utils;
 
 /**
  * @author KunMinX
