@@ -37,4 +37,9 @@ public class MapBusiness extends BaseBusiness<NoteBus> implements IMapRequest {
             }
         });
     }
+
+    @Override
+    public void onDestroy() {
+
+    }
 }

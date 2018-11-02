@@ -41,7 +41,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation project(':common')
-    compileOnly "com.kunminx.viabus:viabus-architecture:0.4.3"
+    compileOnly project(':architecture')
+//    compileOnly "com.kunminx.viabus:viabus-architecture:0.4.3"
+    compileOnly 'me.yokeyword:fragmentation:1.3.6'
 
 //    implementation "com.kunminx.viabus:viabus-architecture:0.4.2"
 

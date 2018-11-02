@@ -97,4 +97,9 @@ public class NoteBusiness extends BaseBusiness<NoteBus> implements INoteRequest 
             }
         });
     }
+
+    @Override
+    public void onDestroy() {
+
+    }
 }

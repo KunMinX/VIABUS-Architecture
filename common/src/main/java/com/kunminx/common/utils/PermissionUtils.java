@@ -10,7 +10,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 
-import com.kunminx.architecture.R;
+import com.kunminx.common.R;
+
 
 /**
  * @author KunMinX
@@ -30,7 +31,7 @@ public class PermissionUtils {
             }
         }
         if (allAllowed) {
-            sIPermissionCallback.onAllowedPermissions();
+            sIPermissionCallback.onResult(null);
         }
     }
 
@@ -64,11 +65,11 @@ public class PermissionUtils {
                 }
                 if (TextUtils.isEmpty(sb.toString())) {
                     if (sIPermissionCallback != null) {
-                        sIPermissionCallback.onAllowedPermissions();
+                        sIPermissionCallback.onResult(null);
                     }
                 } else {
                     if (sIPermissionCallback != null) {
-                        sIPermissionCallback.onDeniedPermissions(sb.toString());
+                        sIPermissionCallback.onResult(sb.toString());
                     }
                 }
                 break;
@@ -79,9 +80,12 @@ public class PermissionUtils {
     private static IPermissionCallback sIPermissionCallback;
 
     public interface IPermissionCallback {
-        void onAllowedPermissions();
-
-        void onDeniedPermissions(String msg);
+        /**
+         * if msg not null, means permission denied
+         *
+         * @param msg
+         */
+        void onResult(String msg);
     }
 
     /**

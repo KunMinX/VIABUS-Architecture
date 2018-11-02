@@ -3,9 +3,10 @@ package com.kunminx.viabus.ui;
 import android.Manifest;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 
+import com.kunminx.architecture.business.bus.Result;
+import com.kunminx.common.base.BaseBusActivity;
 import com.kunminx.common.utils.PermissionUtils;
 import com.kunminx.viabus.R;
 import com.kunminx.viabus.business.NoteBusiness;
@@ -16,36 +17,30 @@ import com.kunminx.viabus.databinding.ActivityMainBinding;
  * @author KunMinX
  * @date 2018/8/21
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseBusActivity {
 
     private ActivityMainBinding mBinding;
+    private NoteBusiness mNoteBusiness;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        initModel();
+        initBusiness();
     }
 
-    private void initView() {
-        NoteBusiness noteBusiness = new NoteBusiness();
-        noteBusiness.init(this.getApplicationContext());
-        NoteBus.registerRequestHandler(noteBusiness);
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.fragment_container, NoteListFragment.newInstance())
-                .addToBackStack(null).commit();
-    }
-
-    private void initModel() {
+    private void initBusiness() {
         PermissionUtils.requestPermissionInActivity(new PermissionUtils.IPermissionCallback() {
             @Override
-            public void onAllowedPermissions() {
-                initView();
-            }
-
-            @Override
-            public void onDeniedPermissions(String msg) {
-
+            public void onResult(String msg) {
+                if (TextUtils.isEmpty(msg)) {
+                    mNoteBusiness = new NoteBusiness();
+                    mNoteBusiness.init(MainActivity.this.getApplicationContext());
+                    NoteBus.registerRequestHandler(mNoteBusiness);
+                    loadRootFragment(R.id.fragment_container, NoteListFragment.newInstance());
+                } else {
+                    //TODO
+                }
             }
         }, this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }
@@ -53,17 +48,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        NoteBus.unregisterRequestHandler(mNoteBusiness);
+        mNoteBusiness = null;
+    }
+
+
+    @Override
+    public void onResultHandle(Result testResult) {
+
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        PermissionUtils.onRequestPermissionsResult(getApplicationContext(), requestCode, permissions, grantResults);
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
+    public void onBackPressedSupport() {
+        super.onBackPressedSupport();
         if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
             finish();
         }

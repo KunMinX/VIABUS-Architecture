@@ -3,14 +3,13 @@ package com.kunminx.viabus.ui;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kunminx.architecture.business.bus.IResponse;
 import com.kunminx.architecture.business.bus.Result;
+import com.kunminx.common.base.BaseBusFragment;
 import com.kunminx.viabus.R;
 import com.kunminx.viabus.business.bus.NoteBus;
 import com.kunminx.viabus.business.constant.NoteResultCode;
@@ -20,7 +19,7 @@ import com.kunminx.viabus.databinding.FragmentNoteDetailBinding;
  * @author KunMinX
  * @date 2018/8/21
  */
-public class NoteDetailFragment extends Fragment implements IResponse {
+public class NoteDetailFragment extends BaseBusFragment {
 
     private FragmentNoteDetailBinding mBinding;
     private final static String TITLE = "TITLE";
@@ -61,6 +60,12 @@ public class NoteDetailFragment extends Fragment implements IResponse {
         }
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        NoteBus.unregisterResponseObserver(this);
+    }
+
     public class ClickProxy {
         public void save() {
             if (!mBinding.et.getText().toString().equals(mTitle)) {
@@ -78,7 +83,7 @@ public class NoteDetailFragment extends Fragment implements IResponse {
     }
 
     @Override
-    public void onResult(Result testResult) {
+    public void onResultHandle(Result testResult) {
         String resultCode = (String) testResult.getResultCode();
         switch (resultCode) {
             case NoteResultCode.INSERTED:
@@ -93,11 +98,5 @@ public class NoteDetailFragment extends Fragment implements IResponse {
                 break;
             default:
         }
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        NoteBus.unregisterResponseObserver(this);
     }
 }

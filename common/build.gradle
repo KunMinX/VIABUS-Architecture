@@ -20,6 +20,10 @@ android {
         }
     }
 
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -30,8 +34,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-//    implementation project(':architecture')
-    implementation "com.kunminx.viabus:viabus-architecture:0.4.3"
+    implementation project(':architecture')
+//    implementation "com.kunminx.viabus:viabus-architecture:0.4.3"
     implementation 'me.yokeyword:fragmentation:1.3.6'
 
     compileOnly deps.rxjava

@@ -1,12 +1,3 @@
 <resources>
     <string name="app_name">architecture</string>
-    <string name="permission_group_sensor">传感器</string>
-    <string name="permission_group_location">定位</string>
-    <string name="permission_group_camera">摄像头</string>
-    <string name="permission_group_audio">录音</string>
-    <string name="permission_group_phone">手机</string>
-    <string name="permission_group_sms">短信</string>
-    <string name="permission_group_contact">联系人</string>
-    <string name="permission_group_calendar">日历</string>
-    <string name="permission_group_extenal_storage">外部存储</string>
 </resources>

@@ -3,14 +3,13 @@ package com.kunminx.viabus.ui;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.kunminx.architecture.business.bus.IResponse;
 import com.kunminx.architecture.business.bus.Result;
+import com.kunminx.common.base.BaseBusFragment;
 import com.kunminx.viabus.R;
 import com.kunminx.viabus.bean.NoteBean;
 import com.kunminx.viabus.business.bus.NoteBus;
@@ -25,7 +24,7 @@ import java.util.UUID;
  * @author KunMinX
  * @date 2018/8/21
  */
-public class NoteListFragment extends Fragment implements IResponse {
+public class NoteListFragment extends BaseBusFragment {
 
     private FragmentNoteListBinding mBinding;
     private NoteListAdapter mAdapter;
@@ -39,6 +38,7 @@ public class NoteListFragment extends Fragment implements IResponse {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         NoteBus.registerResponseObserver(this);
+        NoteBus.note().queryList();
     }
 
     @Nullable
@@ -60,7 +60,12 @@ public class NoteListFragment extends Fragment implements IResponse {
     private void initViews() {
         mAdapter = new NoteListAdapter(getContext());
         mBinding.rv.setAdapter(mAdapter);
-        NoteBus.note().queryList();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        NoteBus.unregisterResponseObserver(this);
     }
 
     public class ClickProxy {
@@ -75,7 +80,7 @@ public class NoteListFragment extends Fragment implements IResponse {
     }
 
     @Override
-    public void onResult(Result testResult) {
+    public void onResultHandle(Result testResult) {
         String resultCode = (String) testResult.getResultCode();
         switch (resultCode) {
             case NoteResultCode.QUERY_LIST:
@@ -98,11 +103,5 @@ public class NoteListFragment extends Fragment implements IResponse {
                 break;
             default:
         }
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        NoteBus.unregisterResponseObserver(this);
     }
 }

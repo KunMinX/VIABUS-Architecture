@@ -20,7 +20,7 @@ import io.reactivex.schedulers.Schedulers;
  * @author KunMinX
  * @date 2018/8/22
  */
-public class BaseBusiness<B extends BaseBus> {
+public abstract class BaseBusiness<B extends BaseBus> {
 
     private boolean pringLog = false;
 
@@ -114,4 +114,6 @@ public class BaseBusiness<B extends BaseBus> {
     public void setPringLog(boolean pringLog) {
         this.pringLog = pringLog;
     }
+
+    public abstract void onDestroy();
 }

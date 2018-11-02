@@ -13,5 +13,4 @@ public interface IMapRequest extends IRequest {
     void locate(int x, int y);
 
     void mark(int x, int y, Drawable drawable, String text);
-
 }

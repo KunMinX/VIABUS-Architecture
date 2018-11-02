@@ -6,4 +6,6 @@ package com.kunminx.architecture.business.bus;
  */
 public interface IRequest {
 
+    void onDestroy();
+
 }

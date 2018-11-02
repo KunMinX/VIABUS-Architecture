@@ -37,6 +37,7 @@ public class BaseBus {
     public static void unregisterRequestHandler(IRequest request) {
         String name = request.getClass().getSimpleName();
         if (mIRequest.get(name) != null) {
+            request.onDestroy();
             mIRequest.remove(name);
         }
     }

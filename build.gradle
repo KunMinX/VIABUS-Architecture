@@ -18,7 +18,18 @@ allprojects {
     repositories {
         google()
         jcenter()
+        //本地仓库
+        /*maven {
+            url '..\\repository';
+        }*/
     }
+
+    tasks.withType(Javadoc) {//防止编码问题
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+        options.addStringOption('charSet', 'UTF-8')
+    }
+
 }
 
 task clean(type: Delete) {

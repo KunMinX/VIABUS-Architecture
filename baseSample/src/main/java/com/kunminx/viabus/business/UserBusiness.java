@@ -55,4 +55,9 @@ public class UserBusiness extends BaseBusiness<NoteBus> implements IUserRequest 
             }
         });
     }
+
+    @Override
+    public void onDestroy() {
+
+    }
 }
