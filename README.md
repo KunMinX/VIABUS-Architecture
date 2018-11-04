@@ -25,8 +25,8 @@
 更多依据详见 [Wiki - Android：四大架构的优缺点，你真的了解吗？](https://github.com/KunMinX/android-viabus-architecture/wiki/Android-%E5%90%84%E7%B1%BB%E6%9E%B6%E6%9E%84%E6%A8%AA%E5%90%91%E6%AF%94%E5%AF%B9)
 
 # 如何使用 ViaBus 
-在模块的 build.gradle 添加如下 **任一** 依赖
-```
+在模块的 build.gradle 添加如下**任一**依赖
+```java
 //持续集成的 ViaBus 快速开发框架（包含 viabus 内核以及热门框架，已用于我司产品的快速开发和重构）
 implementation "com.kunminx.viabus:viabus-architecture:0.4.4"
 
