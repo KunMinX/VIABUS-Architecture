@@ -1,6 +1,6 @@
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabuslogo.png)
 
-![image](https://img.shields.io/badge/jcenter-0.4.3-brightgreen.svg)
+![image](https://img.shields.io/badge/jcenter-0.4.4-brightgreen.svg)
 ![image](https://img.shields.io/badge/api-%2B15-blue.svg)
 ![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
