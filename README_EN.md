@@ -4,7 +4,6 @@
 ![image](https://img.shields.io/badge/api-%2B15-blue.svg)
 ![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
-![image](https://img.shields.io/badge/qq群-905136432-orange.svg)
 
 ### [中文文档](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md) | [English](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_EN.md)
 
@@ -26,9 +25,13 @@
 For details, see [Wiki - Comparison of various architectures](https://github.com/KunMinX/android-viabus-architecture/wiki/Comparison-of-various-architectures.) .
 
 # How to use ViaBus
-Add the following dependency to the module build.gradle
+Add the following random dependency to the module build.gradle
 ```
-implementation "com.kunminx.viabus:viabus-architecture:0.4.3"
+//Continuously integrated viabus rapid development framework (including viabus kernels and popular frameworks for rapid product development)
+implementation "com.kunminx.viabus:viabus-architecture:0.4.4"
+
+//Pure viabus kernel (if you just want to experience a decoupling idea, you can only rely on this item).
+//implementation "com.kunminx.viabus:viabus-core:0.4.4"
 ```
 For details, see [Wiki - how to use ViaBus](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus) .
 
