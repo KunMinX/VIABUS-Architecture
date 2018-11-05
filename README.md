@@ -1,6 +1,6 @@
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabuslogo.png)
 
-![image](https://img.shields.io/badge/jcenter-0.4.4-brightgreen.svg)
+![image](https://img.shields.io/badge/jcenter-0.4.5-brightgreen.svg)
 ![image](https://img.shields.io/badge/api-%2B15-blue.svg)
 ![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
@@ -28,10 +28,10 @@
 在模块的 build.gradle 添加如下 **任一** 依赖
 ```
 //持续集成的 ViaBus 快速开发框架（包含 viabus 内核以及热门框架，已用于我司产品的快速开发和重构）
-implementation "com.kunminx.viabus:viabus-architecture:0.4.4"
+implementation "com.kunminx.viabus:viabus-architecture:0.4.5"
 
 //纯粹的 ViaBus 内核（依赖它你就可以定制属于你的 ViaBus 架构啦）
-//implementation "com.kunminx.viabus:viabus-core:0.4.4"
+//implementation "com.kunminx.viabus:viabus-core:0.4.5"
 
 ```
 使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://github.com/KunMinX/android-viabus-architecture/wiki/1%E5%88%86%E9%92%9F%E6%8E%8C%E6%8F%A1-ViaBus-%E6%9E%B6%E6%9E%84%E7%9A%84%E4%BD%BF%E7%94%A8)

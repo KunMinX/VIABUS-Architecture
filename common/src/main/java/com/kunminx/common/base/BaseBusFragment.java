@@ -2,6 +2,8 @@ package com.kunminx.common.base;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.view.View;
 
 import com.kunminx.architecture.business.bus.IResponse;
 import com.kunminx.architecture.business.bus.Result;
@@ -30,6 +32,10 @@ public abstract class BaseBusFragment extends SupportFragment implements IRespon
      */
     private long enableTime = 0;
 
+    /**
+     * exit time, to judge if is sure to exit
+     */
+    private long exitTime = 0;
 
     @Override
     public void onDestroy() {
@@ -89,6 +95,23 @@ public abstract class BaseBusFragment extends SupportFragment implements IRespon
         long currentTime = System.currentTimeMillis();
         if (currentTime - enableTime > duration) {
             enableTime = currentTime;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /**
+     * is sure to exit after double click
+     *
+     * @return
+     */
+
+    protected boolean isSureToExit(View listView, String tip, int duration) {
+        if ((System.currentTimeMillis() - exitTime) > duration) {
+            Snackbar.make(listView, tip, Snackbar.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
             return true;
         } else {
             return false;
