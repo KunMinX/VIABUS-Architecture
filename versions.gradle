@@ -33,7 +33,9 @@ versions.Vlayout = "1.1.0@aar"
 versions.glide = "3.7.0"
 versions.fastjson = "1.1.68.android"
 versions.okgo = "3.0.4"
-versions.okhttp = "3.10.0"
+versions.okhttp = "3.11.0"
+versions.retrofit = "2.4.0"
+
 versions.viabus = "0.4.5"
 
 def deps = [:]
@@ -68,6 +70,7 @@ deps.Vlayout = "com.alibaba.android:vlayout:$versions.Vlayout" /*{
 deps.glide = "com.github.bumptech.glide:glide:$versions.glide"
 deps.okgo = "com.lzy.net:okgo:$versions.okgo"
 deps.okhttp = "com.squareup.okhttp3:okhttp:$versions.okhttp"
+deps.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit"
 
 def arouter = [:]
 arouter.compiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler"

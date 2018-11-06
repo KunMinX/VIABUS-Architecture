@@ -11,10 +11,10 @@ import android.widget.Toast;
 import com.kunminx.architecture.business.bus.Result;
 import com.kunminx.common.base.BaseBusFragment;
 import com.kunminx.viabus.R;
-import com.kunminx.viabus.bean.NoteBean;
 import com.kunminx.viabus.business.bus.NoteBus;
 import com.kunminx.viabus.business.constant.NoteResultCode;
-import com.kunminx.viabus.databinding.FragmentNoteListBinding;
+import com.kunminx.viabus.databinding.FragmentTodoListBinding;
+import com.kunminx.viabus.repertory.bean.NoteBean;
 import com.kunminx.viabus.ui.adapter.NoteListAdapter;
 
 import java.util.List;
@@ -24,13 +24,13 @@ import java.util.UUID;
  * @author KunMinX
  * @date 2018/8/21
  */
-public class NoteListFragment extends BaseBusFragment {
+public class TodoListFragment extends BaseBusFragment {
 
-    private FragmentNoteListBinding mBinding;
+    private FragmentTodoListBinding mBinding;
     private NoteListAdapter mAdapter;
 
-    public static NoteListFragment newInstance() {
-        NoteListFragment fragment = new NoteListFragment();
+    public static TodoListFragment newInstance() {
+        TodoListFragment fragment = new TodoListFragment();
         return fragment;
     }
 
@@ -44,8 +44,8 @@ public class NoteListFragment extends BaseBusFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_note_list, container, false);
-        mBinding = FragmentNoteListBinding.bind(view);
+        View view = inflater.inflate(R.layout.fragment_todo_list, container, false);
+        mBinding = FragmentTodoListBinding.bind(view);
         mBinding.setClickProxy(new ClickProxy());
         setHasOptionsMenu(true);
         return view;

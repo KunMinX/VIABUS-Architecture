@@ -5,7 +5,7 @@ import android.content.Context;
 import com.kunminx.architecture.business.BaseBusiness;
 import com.kunminx.architecture.business.bus.Result;
 import com.kunminx.viabus.R;
-import com.kunminx.viabus.bean.NoteBean;
+import com.kunminx.viabus.repertory.bean.NoteBean;
 import com.kunminx.viabus.business.bus.INoteRequest;
 import com.kunminx.viabus.business.bus.NoteBus;
 import com.kunminx.viabus.business.constant.NoteResultCode;

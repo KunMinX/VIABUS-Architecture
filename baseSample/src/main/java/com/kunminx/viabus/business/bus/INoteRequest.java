@@ -1,7 +1,7 @@
 package com.kunminx.viabus.business.bus;
 
 import com.kunminx.architecture.business.bus.IRequest;
-import com.kunminx.viabus.bean.NoteBean;
+import com.kunminx.viabus.repertory.bean.NoteBean;
 
 /**
  * @author KunMinX

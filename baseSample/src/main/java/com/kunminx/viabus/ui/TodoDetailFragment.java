@@ -13,21 +13,21 @@ import com.kunminx.common.base.BaseBusFragment;
 import com.kunminx.viabus.R;
 import com.kunminx.viabus.business.bus.NoteBus;
 import com.kunminx.viabus.business.constant.NoteResultCode;
-import com.kunminx.viabus.databinding.FragmentNoteDetailBinding;
+import com.kunminx.viabus.databinding.FragmentTodoDetailBinding;
 
 /**
  * @author KunMinX
  * @date 2018/8/21
  */
-public class NoteDetailFragment extends BaseBusFragment {
+public class TodoDetailFragment extends BaseBusFragment {
 
-    private FragmentNoteDetailBinding mBinding;
+    private FragmentTodoDetailBinding mBinding;
     private final static String TITLE = "TITLE";
     private String mTitle;
     private boolean mIsNew;
 
-    public static NoteDetailFragment newInstance(String title) {
-        NoteDetailFragment fragment = new NoteDetailFragment();
+    public static TodoDetailFragment newInstance(String title) {
+        TodoDetailFragment fragment = new TodoDetailFragment();
         Bundle bundle = new Bundle();
         bundle.putString(TITLE, title);
         fragment.setArguments(bundle);
@@ -37,8 +37,8 @@ public class NoteDetailFragment extends BaseBusFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_note_detail, container, false);
-        mBinding = FragmentNoteDetailBinding.bind(view);
+        View view = inflater.inflate(R.layout.fragment_todo_detail, container, false);
+        mBinding = FragmentTodoDetailBinding.bind(view);
         mBinding.setClickProxy(new ClickProxy());
         setHasOptionsMenu(true);
         NoteBus.registerResponseObserver(this);

@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.bumptech.glide.Glide;
 import com.kunminx.viabus.R;
-import com.kunminx.viabus.bean.NoteBean;
+import com.kunminx.viabus.repertory.bean.NoteBean;
 import com.kunminx.viabus.business.bus.NoteBus;
 import com.kunminx.viabus.databinding.AdapterTestListBinding;
 

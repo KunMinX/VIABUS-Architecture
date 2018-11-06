@@ -37,7 +37,7 @@ public class MainActivity extends BaseBusActivity {
                     mNoteBusiness = new NoteBusiness();
                     mNoteBusiness.init(MainActivity.this.getApplicationContext());
                     NoteBus.registerRequestHandler(mNoteBusiness);
-                    loadRootFragment(R.id.fragment_container, NoteListFragment.newInstance());
+                    loadRootFragment(R.id.fragment_container, TodoListFragment.newInstance());
                 } else {
                     //TODO
                 }

@@ -7,7 +7,7 @@ import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
-import com.kunminx.viabus.bean.NoteBean;
+import com.kunminx.viabus.repertory.bean.NoteBean;
 
 import java.util.List;
 

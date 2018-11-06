@@ -1,4 +1,4 @@
-package com.kunminx.viabus.bean;
+package com.kunminx.viabus.repertory.bean;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;

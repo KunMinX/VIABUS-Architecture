@@ -6,7 +6,7 @@
 
         <variable
             name="clickProxy"
-            type="com.kunminx.viabus.ui.NoteDetailFragment.ClickProxy"/>
+            type="com.kunminx.viabus.ui.TodoDetailFragment.ClickProxy"/>
 
     </data>
 

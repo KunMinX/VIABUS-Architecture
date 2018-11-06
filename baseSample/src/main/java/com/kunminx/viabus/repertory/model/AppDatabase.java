@@ -6,7 +6,7 @@ import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.kunminx.viabus.bean.NoteBean;
+import com.kunminx.viabus.repertory.bean.NoteBean;
 
 /**
  * @author KunMinX

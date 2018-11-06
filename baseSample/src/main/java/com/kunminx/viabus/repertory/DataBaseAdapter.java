@@ -2,10 +2,9 @@ package com.kunminx.viabus.repertory;
 
 import android.content.Context;
 
-import com.kunminx.viabus.bean.NoteBean;
+import com.kunminx.viabus.repertory.bean.NoteBean;
 import com.kunminx.viabus.business.constant.Configs;
 import com.kunminx.viabus.repertory.model.AppDatabase;
-import com.kunminx.viabus.repertory.model.NoteDao;
 
 import java.util.List;
 
