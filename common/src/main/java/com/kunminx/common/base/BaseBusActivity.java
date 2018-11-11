@@ -22,7 +22,7 @@ public abstract class BaseBusActivity extends SupportActivity implements IRespon
     /**
      * save init data to temp list.
      */
-    protected List<Result> mInitResult = new ArrayList<>();
+    private List<Result> mInitResult = new ArrayList<>();
 
     private boolean isResumed = false;
 

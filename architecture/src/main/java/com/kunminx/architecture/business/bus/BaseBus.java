@@ -26,7 +26,9 @@ public class BaseBus {
             }
         }
         if (implementedInterface == null) {
-            throw new RuntimeException("Error: Please declare a request interface extends IRequest, and then make business class implement it.");
+            throw new RuntimeException(
+                    "Error: Please declare a request interface extends IRequest, "
+                            + "and then make business class implement it.");
         }
         String name = implementedInterface.getSimpleName();
         if (!TextUtils.isEmpty(name) && mIRequest.get(name) == null) {
@@ -64,7 +66,8 @@ public class BaseBus {
             return;
         }
         if (mIResponses != null && mIResponses.size() > 0) {
-            //use for instead of foreach, to avoid java.util.ConcurrentModificationException by added register handler while traversal.
+            //use for instead of foreach, to avoid java.util.
+            //ConcurrentModificationException by added register handler while traversal.
             int length = mIResponses.size();
             for (int i = 0; i < length; i++) {
                 mIResponses.get(i).onResult(result);
@@ -75,7 +78,8 @@ public class BaseBus {
     protected static IRequest getRequest(Class iRequest) {
         IRequest iRequest1 = mIRequest.get(iRequest.getSimpleName());
         if (iRequest1 == null) {
-            throw new RuntimeException("Error: Please register a request '" + iRequest.getSimpleName() + "' by bus");
+            throw new RuntimeException(
+                    "Error: Please register a request '" + iRequest.getSimpleName() + "' by bus");
         }
         return iRequest1;
     }

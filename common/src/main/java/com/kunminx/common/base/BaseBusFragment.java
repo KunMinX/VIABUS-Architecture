@@ -25,7 +25,7 @@ public abstract class BaseBusFragment extends SupportFragment implements IRespon
     /**
      * for saving temp init data.
      */
-    protected List<Result> mInitResult = new ArrayList<>();
+    private List<Result> mInitResult = new ArrayList<>();
 
     /**
      * for forbidden repeated click in one times
@@ -66,6 +66,7 @@ public abstract class BaseBusFragment extends SupportFragment implements IRespon
 
     /**
      * if init animation not loaded, save init data into temp list instead of handle immediately.
+     * in order to smoothly load init data instead of blunt.
      *
      * @param testResult
      */
