@@ -13,7 +13,7 @@ import java.util.UUID;
 
 /**
  * @author KunMinX
- * @date 2018/9/20
+ * Create at 2018/9/20
  */
 public class NoteListAdapter extends BaseBindingAdapter<NoteBean, AdapterTestListBinding> {
 

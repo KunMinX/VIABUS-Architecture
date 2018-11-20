@@ -18,7 +18,7 @@ import io.reactivex.ObservableEmitter;
 
 /**
  * @author KunMinX
- * @date 2018/9/19
+ * Create at 2018/9/19
  */
 public class NoteBusiness extends BaseBusiness<NoteBus> implements INoteRequest {
 

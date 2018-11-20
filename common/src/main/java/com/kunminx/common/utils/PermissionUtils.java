@@ -15,7 +15,7 @@ import com.kunminx.common.R;
 
 /**
  * @author KunMinX
- * @date 2018/7/6
+ * Create at 2018/7/6
  */
 public class PermissionUtils {
 

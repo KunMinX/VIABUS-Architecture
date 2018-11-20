@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @author KunMinX
- * @date 2018/6/30
+ * Create at 2018/6/30
  */
 public abstract class BaseBindingAdapter<M, B extends ViewDataBinding> extends RecyclerView.Adapter {
 

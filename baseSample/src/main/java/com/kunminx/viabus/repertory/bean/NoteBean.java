@@ -6,7 +6,7 @@ import android.arch.persistence.room.PrimaryKey;
 
 /**
  * @author KunMinX
- * @date 2018/8/22
+ * Create at 2018/8/22
  * <p>
  * 实体类
  */

@@ -18,7 +18,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * @author KunMinX
- * @date 2018/8/22
+ * Create at 2018/8/22
  */
 public abstract class BaseBusiness<B extends BaseBus> {
 
