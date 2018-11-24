@@ -15,7 +15,7 @@ import me.yokeyword.fragmentation.SupportActivity;
 
 /**
  * @author KunMinX
- * @date 2018/7/5
+ * Create at 2018/7/5
  */
 public abstract class BaseBusActivity extends SupportActivity implements IResponse {
 

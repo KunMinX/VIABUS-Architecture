@@ -10,7 +10,7 @@ import com.kunminx.viabus.repertory.bean.NoteBean;
 
 /**
  * @author KunMinX
- * @date 2018/6/30
+ * Create at 2018/6/30
  */
 @Database(entities = {NoteBean.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {

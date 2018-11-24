@@ -5,7 +5,7 @@ import com.kunminx.viabus.repertory.bean.NoteBean;
 
 /**
  * @author KunMinX
- * @date 2018/9/19
+ * Create at 2018/9/19
  */
 public interface INoteRequest extends IRequest{
 

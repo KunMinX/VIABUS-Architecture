@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @author KunMinX
- * @date 2018/8/22
+ * Create at 2018/8/22
  */
 public class DataBaseAdapter implements IDataBaseInterface<NoteBean> {
 

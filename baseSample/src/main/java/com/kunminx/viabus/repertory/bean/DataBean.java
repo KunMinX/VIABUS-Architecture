@@ -2,7 +2,7 @@ package com.kunminx.viabus.repertory.bean;
 
 /**
  * @author KunMinX
- * @date 2018/11/6
+ * Create at 2018/11/6
  */
 public class DataBean {
 

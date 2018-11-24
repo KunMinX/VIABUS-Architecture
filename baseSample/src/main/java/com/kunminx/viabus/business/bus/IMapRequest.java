@@ -6,7 +6,7 @@ import com.kunminx.architecture.business.bus.IRequest;
 
 /**
  * @author KunMinX
- * @date 2018/9/19
+ * Create at 2018/9/19
  */
 public interface IMapRequest extends IRequest {
 

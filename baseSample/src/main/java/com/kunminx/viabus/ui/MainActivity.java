@@ -15,7 +15,7 @@ import com.kunminx.viabus.databinding.ActivityMainBinding;
 
 /**
  * @author KunMinX
- * @date 2018/8/21
+ * Create at 2018/8/21
  */
 public class MainActivity extends BaseBusActivity {
 

@@ -2,7 +2,7 @@ package com.kunminx.viabus.business.constant;
 
 /**
  * @author KunMinX
- * @date 2018/8/28
+ * Create at 2018/8/28
  */
 public class NoteResultCode {
 

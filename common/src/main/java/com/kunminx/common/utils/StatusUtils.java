@@ -2,7 +2,7 @@ package com.kunminx.common.utils;
 
 /**
  * @author KunMinX
- * @date 2018/10/23
+ * Create at 2018/10/23
  */
 public class StatusUtils {
     public static boolean isEnabledStatus(int statuses, int... statusABC) {
