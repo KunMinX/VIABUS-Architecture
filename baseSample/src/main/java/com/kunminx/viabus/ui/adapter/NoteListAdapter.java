@@ -1,6 +1,7 @@
 package com.kunminx.viabus.ui.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.bumptech.glide.Glide;
@@ -27,22 +28,22 @@ public class NoteListAdapter extends BaseBindingAdapter<NoteBean, AdapterTestLis
     }
 
     @Override
-    protected void onBindItem(final AdapterTestListBinding binding, final NoteBean item, final int position) {
+    protected void onBindItem(AdapterTestListBinding binding, final NoteBean item, final RecyclerView.ViewHolder holder) {
         binding.tvTitle.setText(item.getTitle());
         Glide.with(mContext).load(item.getImgUrl()).into(binding.ivThumb);
         binding.tvTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 item.setTitle(UUID.randomUUID().toString());
-                notifyItemChanged(position);
+                notifyItemChanged(holder.getAdapterPosition());
                 NoteBus.note().update(item);
             }
         });
         binding.tvTitle.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                getList().remove(position);
-                notifyItemRemoved(position);
+                getList().remove(holder.getAdapterPosition());
+                notifyItemRemoved(holder.getAdapterPosition());
                 NoteBus.note().delete(item);
                 return true;
             }

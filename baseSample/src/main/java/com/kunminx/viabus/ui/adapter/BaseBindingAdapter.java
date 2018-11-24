@@ -74,15 +74,23 @@ public abstract class BaseBindingAdapter<M, B extends ViewDataBinding> extends R
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         B binding = DataBindingUtil.getBinding(holder.itemView);
-        this.onBindItem(binding, this.mList.get(position), position);
+        this.onBindItem(binding, this.mList.get(position), holder);
     }
 
     protected abstract @LayoutRes
     int getLayoutResId(int viewType);
 
-    protected abstract void onBindItem(B binding, M item, int position);
+    /**
+     * RecyclerView 中的数据有位置改变（比如删除）时一般不会重新调用 onBindViewHolder() 方法，除非这个元素不可用。
+     * 为了实时获取元素的位置，我们通过 ViewHolder.getAdapterPosition() 方法。
+     *
+     * @param binding
+     * @param item
+     * @param holder
+     */
+    protected abstract void onBindItem(B binding, M item, RecyclerView.ViewHolder holder);
 
     public class BaseBindingViewHolder extends RecyclerView.ViewHolder {
         BaseBindingViewHolder(View itemView) {
