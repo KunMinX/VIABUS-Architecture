@@ -57,6 +57,12 @@ RxJava
 掘金：[Android：你还在等那个，手把手带你重构的人出现吗？](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
 
 
+# 友情推荐
+
+其他平台我认为不错的解耦分离系列博客
+
+[从零打造前后分离 WEB 项目](https://github.com/pkwenda/Blog)
+
 # License
 
 ```
