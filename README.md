@@ -22,7 +22,7 @@
 - 更少的重复工作，扁平的交互模式，代码复用率提升至100%。💪
 - ...
 
-更多依据详见 [Wiki - Android：四大架构的优缺点，你真的了解吗？](https://juejin.im/post/5c124a92e51d45242973f0ba)
+更多依据详见 [Wiki - Android：四大架构的优缺点，你真的了解吗？](https://www.jianshu.com/p/9ef813d5c1af)
 
 # 如何使用 ViaBus 
 在模块的 build.gradle 添加如下 任一 依赖
