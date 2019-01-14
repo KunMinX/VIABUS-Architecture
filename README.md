@@ -10,7 +10,7 @@
 # 什么是 ViaBus
 ⭐ ViaBus 是一款响应式架构，借助总线转发数据的请求和响应，实现ui、业务的完全解耦。
 
-![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
+![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow_cn.png)
 
 # 为什么选择 ViaBus 
 - 1分钟即可掌握，ViaBus 的结构与使用方式。💡
