@@ -15,6 +15,7 @@ public class BaseBus {
 
     private static HashMap<String, IRequest> mIRequest = new HashMap<>();
     private static List<IResponse> mIResponses = new ArrayList<>();
+    private static List<IResponse> mKnockedOutIResponses = new ArrayList<>();
 
     public static void registerRequestHandler(IRequest request) {
         Class[] interfaces = request.getClass().getInterfaces();
@@ -51,28 +52,36 @@ public class BaseBus {
     }
 
     public static void unregisterResponseObserver(IResponse response) {
-        if (response != null && mIResponses.contains(response)) {
-            mIResponses.remove(response);
+        if (response != null) {
+            mKnockedOutIResponses.add(response);
         }
     }
 
     public static void clearAllRegister() {
         mIRequest.clear();
         mIResponses.clear();
+        mKnockedOutIResponses.clear();
     }
 
-    public static void response(Result result) {
+    public synchronized static void response(Result result) {
         if (result == null) {
             return;
         }
         if (mIResponses != null && mIResponses.size() > 0) {
-            //use for instead of foreach, to avoid java.util.
-            //ConcurrentModificationException by added register handler while traversal.
-            int length = mIResponses.size();
-            for (int i = 0; i < length; i++) {
-                mIResponses.get(i).onResult(result);
+            for (int i = 0; i < mIResponses.size(); i++) {
+                IResponse iResponse = mIResponses.get(i);
+                if (!mKnockedOutIResponses.contains(iResponse)) {
+                    iResponse.onResult(result);
+                }
             }
         }
+
+        for (IResponse iResponse : mKnockedOutIResponses) {
+            if (mIResponses != null) {
+                mIResponses.remove(iResponse);
+            }
+        }
+        mKnockedOutIResponses.clear();
     }
 
     protected static IRequest getRequest(Class iRequest) {
