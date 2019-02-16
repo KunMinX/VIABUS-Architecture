@@ -10,7 +10,7 @@
 # 什么是 ViaBus
 ⭐ ViaBus 是一款响应式架构，借助总线转发数据的请求和响应，实现ui、业务的完全解耦。
 
-![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow.png)
+![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow_cn.png)
 
 # 为什么选择 ViaBus 
 - 1分钟即可掌握，ViaBus 的结构与使用方式。💡
@@ -22,7 +22,7 @@
 - 更少的重复工作，扁平的交互模式，代码复用率提升至100%。💪
 - ...
 
-更多依据详见 [Wiki - Android：四大架构的优缺点，你真的了解吗？](https://juejin.im/post/5c124a92e51d45242973f0ba)
+更多依据详见 [Wiki - Android：四大架构的优缺点，你真的了解吗？](https://www.jianshu.com/p/9ef813d5c1af)
 
 # 如何使用 ViaBus 
 在模块的 build.gradle 添加如下 任一 依赖
