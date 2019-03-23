@@ -22,7 +22,7 @@
 - 更少的重复工作，扁平的交互模式，代码复用率提升至100%。💪
 - ...
 
-更多依据详见 [Wiki - Android：四大架构的优缺点，你真的了解吗？](https://www.jianshu.com/p/9ef813d5c1af)
+更多依据详见 [Wiki - Android：你还在等那个，手把手带你重构的人出现吗？](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
 
 # 如何使用 ViaBus 
 在模块的 build.gradle 添加如下 任一 依赖
@@ -54,7 +54,7 @@ RxJava
 
 简书：[kunminx@jianshu](https://www.jianshu.com/u/5d956b6dcf1f)
 
-掘金：[Android：你还在等那个，手把手带你重构的人出现吗？](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
+掘金：[kunminx@juejin](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
 
 # License
 
