@@ -1,2 +1,2 @@
-include ':baseSample', ':common'
-include ':architecture'
+include ':sample', ':architecture'
+include ':core'

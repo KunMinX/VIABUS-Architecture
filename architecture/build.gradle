@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
-
+//apply plugin: 'maven'
+//apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion build_versions.target_sdk
@@ -20,17 +23,95 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
 
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation deps.appcompat_v7
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation deps.rxjava
+    implementation deps.design
+
+    implementation project(':core')
+//    implementation deps.viabus.core
+    implementation 'me.yokeyword:fragmentation:1.3.6'
+
+    compileOnly deps.rxjava
 }
 
+def siteUrl = 'https://github.com/HouXiaohu/Android-UIAlertView'
+def gitUrl = 'https://github.com/HouXiaohu/Android-UIAlertView.git'
+group = "com.hxh.component.ui"
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                // Add your description here
+                description 'A View control with a high profile IOS Alert'
+                name 'androidUiAlertView'  // 可默认，项目描述
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer { //  可默认，开发者信息
+                        id 'YOUR_ID'
+                        name 'YOUR NAME'
+                        email 'YOUR EMAIL'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+task androidJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+}
+
+task androidJavadocsJar(type: Jar) {
+    classifier = 'javadoc'
+    from androidJavadocs.destinationDir
+}
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+
+/*
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri('../repository'))
+        pom.groupId = "com.kunminx.viabus"
+        pom.artifactId = "viabus-architecture"
+        pom.version = build_versions.versionName
+    }
+}
+*/
+publish {
+    userOrg = 'viabus-architecture'
+    groupId = 'com.kunminx.viabus'
+    artifactId = 'architecture'
+    publishVersion = build_versions.versionName
+    desc = 'viabus architecture for android'
+    licences = ['Apache-2.0']
+}
