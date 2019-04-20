@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'maven'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode build_versions.versionCode
+        versionName build_versions.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation deps.rxjava
+}
+
+publish {
+    userOrg = 'viabus-architecture'
+    groupId = 'com.kunminx.viabus'
+    artifactId = 'core'
+    publishVersion = build_versions.versionName
+    desc = 'viabus architecture for android'
+    licences = ['Apache-2.0']
+}
