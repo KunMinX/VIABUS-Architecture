@@ -28,10 +28,10 @@ For details, see [Wiki - Comparison of various architectures](https://github.com
 Add the following random dependency to the module build.gradle
 ```
 //Continuously integrated viabus rapid development framework (including viabus kernels and popular frameworks for rapid product development)
-implementation "com.kunminx.viabus:viabus-architecture:0.4.5"
+implementation "com.kunminx.viabus:architecture:0.4.7"
 
 //Pure viabus kernel (if you just want to experience a decoupling idea, you can only rely on this item).
-//implementation "com.kunminx.viabus:viabus-core:0.4.5"
+implementation "com.kunminx.viabus:core:0.4.7"
 ```
 For details, see [Wiki - how to use ViaBus](https://github.com/KunMinX/android-viabus-architecture/wiki/How-to-use-ViaBus) .
 

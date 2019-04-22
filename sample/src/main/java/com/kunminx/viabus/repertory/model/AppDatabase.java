@@ -19,11 +19,7 @@ public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase INSTANCE = null;
 
-    private static Context mContext;
-
-
-    public static void init(Context context, String dbPath) {
-        mContext = context;
+    public static void init(String dbPath) {
         sDbPath = dbPath;
         if (INSTANCE != null) {
             INSTANCE.close();
@@ -31,11 +27,11 @@ public abstract class AppDatabase extends RoomDatabase {
         }
     }
 
-    public synchronized static AppDatabase getInstance() {
+    public synchronized static AppDatabase getInstance(Context context) {
         if (INSTANCE == null) {
             synchronized (AppDatabase.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(mContext.getApplicationContext(), AppDatabase.class, sDbPath)
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, sDbPath)
                             .allowMainThreadQueries()
                             .build();
                 }

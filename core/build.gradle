@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'maven'
-apply plugin: 'com.novoda.bintray-release'
+
 
 android {
     compileSdkVersion build_versions.target_sdk
@@ -23,10 +22,6 @@ android {
     }
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
@@ -35,11 +30,3 @@ dependencies {
     implementation deps.rxjava
 }
 
-publish {
-    userOrg = 'viabus-architecture'
-    groupId = 'com.kunminx.viabus'
-    artifactId = 'core'
-    publishVersion = build_versions.versionName
-    desc = 'viabus architecture for android'
-    licences = ['Apache-2.0']
-}

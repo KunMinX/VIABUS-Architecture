@@ -28,10 +28,10 @@
 在模块的 build.gradle 添加如下 任一 依赖
 ```java
 //持续集成的 ViaBus 快速开发框架（包含 viabus 内核以及热门框架）
-implementation "com.kunminx.viabus:viabus-architecture:0.4.5"
+implementation "com.kunminx.viabus:architecture:0.4.7"
 
 //纯粹的 ViaBus 内核（依赖它你就可以定制属于你的 ViaBus 架构啦）
-implementation "com.kunminx.viabus:viabus-core:0.4.5"
+implementation "com.kunminx.viabus:core:0.4.7"
 
 ```
 使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://www.jianshu.com/p/6545767d3e54)

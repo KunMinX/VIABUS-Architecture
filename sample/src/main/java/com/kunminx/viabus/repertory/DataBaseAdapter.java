@@ -2,8 +2,8 @@ package com.kunminx.viabus.repertory;
 
 import android.content.Context;
 
-import com.kunminx.viabus.repertory.bean.NoteBean;
 import com.kunminx.viabus.business.constant.Configs;
+import com.kunminx.viabus.repertory.bean.NoteBean;
 import com.kunminx.viabus.repertory.model.AppDatabase;
 
 import java.util.List;
@@ -14,14 +14,19 @@ import java.util.List;
  */
 public class DataBaseAdapter implements IDataBaseInterface<NoteBean> {
 
+    private Context mContext;
+    private AppDatabase mAppDatabase;
+
     @Override
     public void init(Context context) {
-        AppDatabase.init(context, Configs.DB_PATH);
+        mContext = context;
+        AppDatabase.init(Configs.DB_PATH);
+        mAppDatabase = AppDatabase.getInstance(mContext);
     }
 
     @Override
     public List<NoteBean> getList() {
-        return AppDatabase.getInstance().noteDao().getBeans();
+        return mAppDatabase.noteDao().getBeans();
     }
 
     @Override
@@ -31,22 +36,22 @@ public class DataBaseAdapter implements IDataBaseInterface<NoteBean> {
 
     @Override
     public NoteBean getEntity(String uuid) {
-        return AppDatabase.getInstance().noteDao().getBean(0);
+        return mAppDatabase.noteDao().getBean(0);
     }
 
     @Override
     public long insertEntity(NoteBean t) {
-        return AppDatabase.getInstance().noteDao().insertBean(t);
+        return mAppDatabase.noteDao().insertBean(t);
     }
 
     @Override
     public int updateEntity(NoteBean t) {
-        return AppDatabase.getInstance().noteDao().update(t);
+        return mAppDatabase.noteDao().update(t);
     }
 
     @Override
     public int deleteEntity(NoteBean t) {
-        return AppDatabase.getInstance().noteDao().delete(t);
+        return mAppDatabase.noteDao().delete(t);
     }
 
     @Override
