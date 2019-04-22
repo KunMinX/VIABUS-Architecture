@@ -1,4 +1,4 @@
-package com.kunminx.common.utils;
+package com.kunminx.architecture.utils;
 
 import android.Manifest;
 import android.app.Activity;
@@ -10,7 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 
-import com.kunminx.common.R;
+import com.kunminx.architecture.R;
 
 
 /**

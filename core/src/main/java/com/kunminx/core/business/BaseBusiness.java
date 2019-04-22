@@ -1,10 +1,10 @@
-package com.kunminx.architecture.business;
+package com.kunminx.core.business;
 
 import android.util.Log;
 
-import com.kunminx.architecture.business.bus.BaseBus;
-import com.kunminx.architecture.business.bus.Result;
-import com.kunminx.architecture.business.bus.ResultCode;
+import com.kunminx.core.bus.BaseBus;
+import com.kunminx.core.bus.Result;
+import com.kunminx.core.bus.ResultCode;
 
 import java.io.IOException;
 

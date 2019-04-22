@@ -2,8 +2,8 @@ package com.kunminx.viabus.business;
 
 import android.graphics.drawable.Drawable;
 
-import com.kunminx.architecture.business.BaseBusiness;
-import com.kunminx.architecture.business.bus.Result;
+import com.kunminx.core.business.BaseBusiness;
+import com.kunminx.core.bus.Result;
 import com.kunminx.viabus.business.bus.IMapRequest;
 import com.kunminx.viabus.business.bus.NoteBus;
 

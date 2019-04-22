@@ -1,4 +1,4 @@
-package com.kunminx.architecture.business.bus;
+package com.kunminx.core.bus;
 
 import android.text.TextUtils;
 

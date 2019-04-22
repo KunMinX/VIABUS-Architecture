@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kunminx.architecture.business.bus.Result;
-import com.kunminx.common.base.BaseBusFragment;
+import com.kunminx.core.bus.Result;
+import com.kunminx.architecture.base.BaseBusFragment;
 import com.kunminx.viabus.R;
 import com.kunminx.viabus.business.bus.NoteBus;
 import com.kunminx.viabus.business.constant.NoteResultCode;

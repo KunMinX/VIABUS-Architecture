@@ -109,8 +109,8 @@ build_versions.target_sdk = 27
 build_versions.build_tools = "27.0.3"
 
 //architecture的版本信息
-build_versions.versionCode = 47
-build_versions.versionName = "0.4.7"
+build_versions.versionCode = 48
+build_versions.versionName = "0.4.8"
 ext.build_versions = build_versions
 
 

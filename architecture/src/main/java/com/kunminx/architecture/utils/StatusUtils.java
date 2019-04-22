@@ -1,4 +1,4 @@
-package com.kunminx.common.utils;
+package com.kunminx.architecture.utils;
 
 /**
  * @author KunMinX

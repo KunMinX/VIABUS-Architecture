@@ -5,9 +5,9 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import com.kunminx.architecture.business.bus.Result;
-import com.kunminx.common.base.BaseBusActivity;
-import com.kunminx.common.utils.PermissionUtils;
+import com.kunminx.core.bus.Result;
+import com.kunminx.architecture.base.BaseBusActivity;
+import com.kunminx.architecture.utils.PermissionUtils;
 import com.kunminx.viabus.R;
 import com.kunminx.viabus.business.NoteBusiness;
 import com.kunminx.viabus.business.bus.NoteBus;

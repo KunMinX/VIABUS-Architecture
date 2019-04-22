@@ -1,6 +1,6 @@
 package com.kunminx.viabus.business.bus;
 
-import com.kunminx.architecture.business.bus.BaseBus;
+import com.kunminx.core.bus.BaseBus;
 
 /**
  * author：KunMinX

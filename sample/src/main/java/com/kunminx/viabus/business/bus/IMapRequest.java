@@ -2,7 +2,7 @@ package com.kunminx.viabus.business.bus;
 
 import android.graphics.drawable.Drawable;
 
-import com.kunminx.architecture.business.bus.IRequest;
+import com.kunminx.core.bus.IRequest;
 
 /**
  * @author KunMinX

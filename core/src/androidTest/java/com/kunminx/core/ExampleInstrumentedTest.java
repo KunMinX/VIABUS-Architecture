@@ -1,4 +1,4 @@
-package com.kunminx.architecture;
+package com.kunminx.core;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
