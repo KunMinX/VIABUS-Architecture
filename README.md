@@ -1,6 +1,6 @@
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabuslogo.png)
 
-![image](https://img.shields.io/badge/jcenter-0.4.5-brightgreen.svg)
+![image](https://img.shields.io/badge/jcenter-0.4.8-brightgreen.svg)
 ![image](https://img.shields.io/badge/api-%2B15-blue.svg)
 ![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
@@ -8,7 +8,7 @@
 ### [中文文档](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md) | [English](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_EN.md)
 
 # 什么是 ViaBus
-⭐ ViaBus 是一款响应式架构，借助总线转发数据的请求和响应，实现ui、业务的完全解耦。
+⭐ ViaBus 是一款响应式架构，借助总线转发数据的请求和响应，实现 UI、业务的完全解耦。
 
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow_cn.png)
 
@@ -22,7 +22,7 @@
 - 更少的重复工作，扁平的交互模式，代码复用率提升至100%。💪
 - ...
 
-更多依据详见 [Wiki - Android：你还在等那个，手把手带你重构的人出现吗？](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
+更多依据详见 [你一定想知道的，如何为项目挑选合适的架构](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
 
 # 如何使用 ViaBus 
 在模块的 build.gradle 添加如下 任一 依赖
@@ -34,7 +34,7 @@ implementation "com.kunminx.viabus:architecture:0.4.8"
 implementation "com.kunminx.viabus:core:0.4.8"
 
 ```
-使用方法详见 [Wiki - 1分钟掌握 ViaBus 架构和使用](https://www.jianshu.com/p/6545767d3e54)
+使用方法详见 [1分钟掌握 ViaBus 架构和使用](https://www.jianshu.com/p/6545767d3e54)
 
 # 谁在用 Viabus
 
@@ -50,11 +50,11 @@ RxJava
 
 # 更多访问
 
-邮箱：[kunminx@gmail.com](mailto:kunminx@gmail.com)
+Email：[kunminx@gmail.com](mailto:kunminx@gmail.com)
 
-简书：[kunminx@jianshu](https://www.jianshu.com/u/5d956b6dcf1f)
+Home：[KunMinX 的个人博客](https://kunminx.github.io/)
 
-掘金：[kunminx@juejin](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
+Juejin：[KunMinX 在掘金](https://juejin.im/user/58ab0de9ac502e006975d757/posts)
 
 # License
 
