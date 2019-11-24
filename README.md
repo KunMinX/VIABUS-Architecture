@@ -5,26 +5,28 @@
 ![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 ![image](https://img.shields.io/badge/author-KunMinX-orange.svg)
 
+### [VIABUS iOS 端解决方案 现已同步上市！🎉🎉🎉](https://github.com/BBC6BAE9/BBEventBus)
+
 ### [中文文档](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_CN.md) | [English](https://github.com/KunMinX/android-viabus-architecture/blob/master/README_EN.md)
 
-# 什么是 ViaBus
-⭐ ViaBus 是一款响应式架构，借助总线转发数据的请求和响应，实现 UI、业务的完全解耦。
+# 什么是 VIABUS
+⭐ VIABUS 是一款响应式架构，借助总线转发数据的请求和响应，实现 UI、业务的完全解耦。
 
 ![image](https://github.com/KunMinX/android-viabus-architecture/blob/master/images/viabus_flow_cn.png)
 
-# 为什么选择 ViaBus 
-- 1分钟即可掌握，ViaBus 的结构与使用方式。💡
+# 为什么选择 VIABUS 
+- 1分钟即可掌握，VIABUS 的结构与使用方式。💡
 - 当下就可使用，对原项目架构完全兼容，即插即用。🔥
 - 允许以 业务或模块为单位，每天1小时，完成渐进式重构。💧
 - 职责边界明确，无论是写 UI 还是业务，不再被打断、相互不拖累。🌱
 - 原生接口即可实现 跨 Activity、跨组件的 实时双向通信。⚡
-- 无编译时注解，基于 Viabus 编写的组件可在任何项目中直接使用。🌎
+- 无编译时注解，基于 VIABUS 编写的组件可在任何项目中直接使用。🌎
 - 更少的重复工作，扁平的交互模式，代码复用率提升至100%。💪
 - ...
 
 更多依据详见 [你一定想知道的，如何为项目挑选合适的架构](https://juejin.im/post/5bcd58b6e51d45404c71d23f)
 
-# 如何使用 ViaBus 
+# 如何使用 VIABUS 
 在模块的 build.gradle 添加如下 任一 依赖
 ```java
 //持续集成的 ViaBus 快速开发框架（包含 viabus 内核以及热门框架）
@@ -36,7 +38,7 @@ implementation "com.kunminx.viabus:core:0.4.8"
 ```
 使用方法详见 [1分钟掌握 ViaBus 架构和使用](https://www.jianshu.com/p/6545767d3e54)
 
-# 谁在用 Viabus
+# 谁在用 VIABUS
 
 |见证者|Logo|作品地址或项目链接|
 |:--:|:--:|:--:|
