@@ -9,7 +9,7 @@
 
 > 曾在发布 1 个月内登顶过 2 次 GitHub Trending 的、为全球数万开发者所见证的[《Jetpack MVVM 最佳实践》](https://github.com/KunMinX/Jetpack-MVVM-Best-Practice)，而不是继续将 VIABUS 应用在项目的重构中。
 
-> VIABUS 的存在，主要是作为 “测试驱动开发” 的范例，来演示在 2018 年，我们是如何在设计模式原则的帮助下，做到让 UI 和 服务的并行开发。
+> VIABUS 的存在，主要是作为 “测试驱动开发” 的范例，来演示在 2018 年，我们是如何在 设计模式原则 的帮助下，做到让 UI 和 业务 的并行开发。
 
 ### [VIABUS iOS 端解决方案 现已同步上市！🎉🎉🎉](https://github.com/BBC6BAE9/BBEventBus)
 
